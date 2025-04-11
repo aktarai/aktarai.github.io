@@ -13,7 +13,7 @@
     }
   </style>
 </head>
-<body class="bg-[#f0f0f0] text-[#1A1A1A]">
+<body class="bg-[#f4f4f4] text-[#1A1A1A]">
 
   <!-- Navigation -->
   <header class="bg-[#4B6E57] shadow sticky top-0 z-50">
@@ -32,7 +32,7 @@
     <!-- Left: Photo and Contact -->
     <aside class="col-span-1 flex flex-col items-center text-center">
       <img src="assets/your-photo.jpg" alt="Your Photo" class="w-72 h-72 rounded-xl object-cover shadow-xl border-4 border-white mb-6">
-      <div class="text-2xl font-extrabold mb-1">Akash Kumar Tarai</div>
+      <div class="text-2xl font-bold mb-1">Akash Kumar Tarai</div>
       <div class="text-[#4B5563] text-base">Postdoctoral Research Fellow</div>
       <div class="text-[#4B5563] text-base mb-4">IISER Berhampur, India</div>
 
@@ -44,8 +44,13 @@
         <a href="mailto:akasht@iiserbpr.ac.in">akasht@iiserbpr.ac.in</a>
       </p>
 
+      <!-- Download CV Button -->
+      <a href="assets/CV.pdf" download class="mt-4 inline-block px-5 py-2 bg-[#4B6E57] text-white text-sm font-medium rounded-lg hover:bg-[#20B2AA] shadow">
+        <i class="fas fa-file-pdf mr-2"></i>Download CV
+      </a>
+
       <!-- Social Icons -->
-      <div class="flex justify-center space-x-6 text-[2.2rem] text-[#4B6E57] mt-3">
+      <div class="flex justify-center space-x-6 text-[2.2rem] text-[#4B6E57] mt-6">
         <a href="https://scholar.google.co.in/citations?user=3q74S1kAAAAJ&hl=en&oi=ao" target="_blank" title="Google Scholar" class="hover:text-[#20B2AA]">
           <i class="fas fa-graduation-cap"></i>
         </a>
@@ -61,16 +66,18 @@
     <!-- Right: Bio and Sections -->
     <section class="col-span-2 space-y-10">
 
+      <!-- Biography -->
       <div>
-        <h2 class="text-2xl font-bold border-b-2 border-[#20B2AA] inline-block pb-1 mb-2">Brief Biography</h2>
+        <h2 class="text-xl font-semibold border-b-2 border-[#20B2AA] pb-1 mb-3">Brief Biography</h2>
         <p class="text-gray-700 leading-relaxed">
           I am a postdoctoral researcher at IISER Berhampur, working on wavefront sensing using deep learning for adaptive optics applications.
         </p>
       </div>
 
+      <!-- Research Areas -->
       <div>
-        <h2 class="text-2xl font-bold border-b-2 border-[#20B2AA] inline-block pb-1 mb-2">Research Areas</h2>
-        <ul class="list-disc list-inside text-gray-700">
+        <h2 class="text-xl font-semibold border-b-2 border-[#20B2AA] pb-1 mb-3">Research Areas</h2>
+        <ul class="list-disc list-inside text-gray-700 space-y-1">
           <li>Laser Induced Breakdown Spectroscopy (LIBS)</li>
           <li>Raman Spectroscopy</li>
           <li>Wavefront Sensing in Adaptive Optics</li>
@@ -78,31 +85,55 @@
         </ul>
       </div>
 
+      <!-- Professional Experience -->
       <div>
-        <h2 class="text-2xl font-bold border-b-2 border-[#20B2AA] inline-block pb-1 mb-4">Professional Experience</h2>
-        <div class="space-y-6">
-          <div>
-            <h3 class="text-lg font-semibold text-[#8B0000]">Postdoctoral Research Fellow <span class="float-right font-semibold">(Dec 2024 - Present)</span></h3>
-            <p class="font-semibold">Department of Physical Sciences<br>IISER Berhampur, India</p>Mentor: Dr. Vyas Akondi</p>
+        <h2 class="text-xl font-semibold border-b-2 border-[#20B2AA] pb-1 mb-3">Professional Experience</h2>
+        <div class="text-sm text-gray-700 space-y-6">
+          <div class="border-l-4 border-[#4B6E57] pl-4">
+            <div class="flex justify-between items-center">
+              <span class="font-semibold">Postdoctoral Research Fellow</span>
+              <span class="text-xs text-gray-500">Dec 2024 – Present</span>
+            </div>
+            <span class="text-gray-600">Department of Physical Sciences, IISER Berhampur, India</span><br>
+            <span class="text-gray-500">Mentor: Dr. Vyas Akondi</span>
           </div>
         </div>
       </div>
 
+      <!-- Education -->
       <div>
-        <h2 class="text-2xl font-bold border-b-2 border-[#20B2AA] inline-block pb-1 mb-4">Education</h2>
-        <ul class="list-disc list-inside text-gray-700">
-          <li>Ph.D. in Physics – University of Hyderabad</li>
-          <li>M.Sc. in Physics – Pondicherry University</li>
-          <li>B.Sc. in Physics – Ravenshaw University</li>
-        </ul>
+        <h2 class="text-xl font-semibold border-b-2 border-[#20B2AA] pb-1 mb-3">Education</h2>
+        <div class="text-sm text-gray-700 space-y-3">
+          <div class="border-l-4 border-[#4B6E57] pl-4">
+            <div class="flex justify-between items-center">
+              <span class="font-semibold">Ph.D. in Physics</span>
+              <span class="text-xs text-gray-500">2024</span>
+            </div>
+            <span class="text-gray-600">University of Hyderabad</span>
+          </div>
+          <div class="border-l-4 border-[#4B6E57] pl-4">
+            <div class="flex justify-between items-center">
+              <span class="font-semibold">M.Sc. in Physics</span>
+              <span class="text-xs text-gray-500">2017</span>
+            </div>
+            <span class="text-gray-600">Pondicherry University</span>
+          </div>
+          <div class="border-l-4 border-[#4B6E57] pl-4">
+            <div class="flex justify-between items-center">
+              <span class="font-semibold">B.Sc. in Physics</span>
+              <span class="text-xs text-gray-500">2015</span>
+            </div>
+            <span class="text-gray-600">Ravenshaw University</span>
+          </div>
+        </div>
       </div>
 
     </section>
   </main>
 
   <!-- Footer -->
-  <footer class="bg-[#f0f0f0] py-6 text-center text-sm text-[#1A1A1A]">
-    Akash Kumar Tarai, Postdoctoral Research Fellow, IISER Berhampur, India
+  <footer class="bg-[#f4f4f4] py-6 text-center text-sm text-[#1A1A1A]">
+    © 2025 Akash Kumar Tarai, Postdoctoral Research Fellow, IISER Berhampur, India
   </footer>
 
 </body>
