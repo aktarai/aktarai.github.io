@@ -16,8 +16,8 @@
       font-weight: bold;
     }
     ol.custom-list {
-      counter-reset: item; /* Start the counter from 1 */
-      padding-left: 0rem; /* Set padding to 0rem for maximum left alignment */
+      counter-reset: item;
+      padding-left: 0rem;
       list-style: none;
     }
     ol.custom-list li {
@@ -39,7 +39,7 @@
     }
     ol.custom-list.reverse {
       display: flex;
-      flex-direction: column-reverse; /* Reverse the order of items */
+      flex-direction: column-reverse;
     }
     .content-block {
       font-size: 1rem;
@@ -64,9 +64,6 @@
         <a href="gallery.html" class="text-white hover:text-[#20B2AA]">Gallery</a>
         <a href="contact.html" class="text-white hover:text-[#20B2AA]">Contact</a>
       </nav>
-      <button id="menu-btn" class="md:hidden text-white text-2xl focus:outline-none">
-        <i class="fas fa-bars"></i>
-      </button>
     </div>
   </header>
 
@@ -75,10 +72,10 @@
 
     <!-- PhD Thesis Section -->
     <section>
-      <h2 onclick="toggleDropdown(this)" class="text-xl font-semibold text-[#4B6E57] border-b-2 border-[#20B2AA] pb-2 cursor-pointer">
+      <h2 class="text-xl font-semibold text-[#4B6E57] border-b-2 border-[#20B2AA] pb-2">
         PhD Thesis
       </h2>
-      <div class="mt-4 hidden content-block">
+      <div class="mt-4 content-block">
         <p class="mb-1 leading-relaxed">
           <a href="http://hdl.handle.net/10603/596075" target="_blank" class="hover:text-[#20B2AA]">
             Development of a novel LIBS based Technique for Elemental Analysis and Harnessing Machine Learning for Real time Applications using LIBS and Raman Spectroscopy
@@ -92,11 +89,11 @@
 
     <!-- Peer-reviewed Publications Section -->
     <section>
-      <h2 onclick="toggleDropdown(this)" class="text-xl font-semibold text-[#4B6E57] border-b-2 border-[#20B2AA] pb-2 cursor-pointer">
+      <h2 class="text-xl font-semibold text-[#4B6E57] border-b-2 border-[#20B2AA] pb-2">
         Peer-reviewed Publications
       </h2>
-      <div class="mt-4 hidden content-block">
-        <ol class="custom-list reverse"> <!-- Added reverse class here -->
+      <div class="mt-4 content-block">
+        <ol class="custom-list reverse">
           <li>
             <a href="https://doi.org/10.1109/XXX.2024.1234567" target="_blank" class="hover:text-[#20B2AA]">
               D. Sharma, <span class="highlight">Akash Kumar Tarai</span>, M. R. Naik, G. Manoj Kumar, "Title of the Peer-reviewed Publication", <i>Journal Name</i>, vol. 12, no. 3, pp. 123-130, 2024.
@@ -113,11 +110,11 @@
 
     <!-- Conference Publications Section -->
     <section>
-      <h2 onclick="toggleDropdown(this)" class="text-xl font-semibold text-[#4B6E57] border-b-2 border-[#20B2AA] pb-2 cursor-pointer">
+      <h2 class="text-xl font-semibold text-[#4B6E57] border-b-2 border-[#20B2AA] pb-2">
         Conference Publications
       </h2>
-      <div class="mt-4 hidden content-block">
-        <ol class="custom-list reverse"> <!-- Added reverse class here -->
+      <div class="mt-4 content-block">
+        <ol class="custom-list reverse">
           <li>
             <a href="https://link.springer.com/chapter/10.1007/978-3-031-12345-6_7" target="_blank" class="hover:text-[#20B2AA]">
               <span class="highlight">Akash Kumar Tarai</span>, S. V. Rao, "Machine Learning Assisted LIBS for Environmental Monitoring", in <i>Laser Applications in Environmental Science</i>, Springer, 2023.
@@ -133,20 +130,5 @@
   <footer class="bg-[#f4f4f4] py-6 text-center text-sm text-[#1A1A1A]">
     © 2025 Akash Kumar Tarai, Postdoctoral Research Fellow, IISER Berhampur, India
   </footer>
-
-  <!-- Script -->
-  <script>
-    function toggleDropdown(element) {
-      const content = element.nextElementSibling;
-      content.classList.toggle('hidden');
-    }
-
-    const menuBtn = document.getElementById('menu-btn');
-    menuBtn.addEventListener('click', () => {
-      const nav = document.querySelector('nav');
-      nav.classList.toggle('hidden');
-    });
-  </script>
-
 </body>
 </html>
