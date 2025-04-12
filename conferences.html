@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Conferences & Workshops | Akash Kumar Tarai</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
@@ -75,34 +75,26 @@
 
     <!-- Conferences Section -->
     <section>
-      <h2 class="text-xl font-semibold text-[#4B6E57] border-b-2 border-[#20B2AA] pb-2">
+      <h2 onclick="toggleDropdown(this)" class="text-xl font-semibold text-[#4B6E57] border-b-2 border-[#20B2AA] pb-2 cursor-pointer">
         Conferences
       </h2>
-      <div class="mt-4 content-block">
+      <div class="mt-4 hidden content-block">
         <ol class="custom-list reverse">
-          <li>
-            <p class="font-bold"><span class="highlight">Akash Kumar Tarai</span>, “Presentation on LIBS for Material Analysis,” National Laser Symposium (NLS-33), 2025, India.</p>
-          </li>
-          <li>
-            <p class="font-bold"><span class="highlight">Akash Kumar Tarai</span>, “Real-time Raman Spectroscopy for Industrial Applications,” International Conference on Photonics and Applications, 2024, Singapore.</p>
-          </li>
+          <li><span class="highlight">Akash Kumar Tarai</span>, Presented at National Laser Symposium (NLS-33), 2025, RRCAT, Indore.</li>
+          <li><span class="highlight">Akash Kumar Tarai</span>, Delivered oral presentation at International Conference on Optics and Photonics, 2023.</li>
         </ol>
       </div>
     </section>
 
     <!-- Workshops Section -->
     <section>
-      <h2 class="text-xl font-semibold text-[#4B6E57] border-b-2 border-[#20B2AA] pb-2">
+      <h2 onclick="toggleDropdown(this)" class="text-xl font-semibold text-[#4B6E57] border-b-2 border-[#20B2AA] pb-2 cursor-pointer">
         Workshops
       </h2>
-      <div class="mt-4 content-block">
+      <div class="mt-4 hidden content-block">
         <ol class="custom-list reverse">
-          <li>
-            <p class="font-bold"><span class="highlight">Akash Kumar Tarai</span>, “Hands-on Training in Laser Spectroscopy,” Workshop on Advanced Instrumentation Techniques, 2023, University of Hyderabad, India.</p>
-          </li>
-          <li>
-            <p class="font-bold"><span class="highlight">Akash Kumar Tarai</span>, “Data-driven Techniques in Optics,” Workshop on AI in Photonics, 2022, IISc Bangalore, India.</p>
-          </li>
+          <li>Attended "Workshop on Spectroscopic Techniques" at IISc Bangalore, 2022.</li>
+          <li>Participated in "Hands-on Training in Raman Spectroscopy", UOH, 2021.</li>
         </ol>
       </div>
     </section>
@@ -114,8 +106,13 @@
     © 2025 Akash Kumar Tarai, Postdoctoral Research Fellow, IISER Berhampur, India
   </footer>
 
-  <!-- Script -->
+  <!-- Scripts -->
   <script>
+    function toggleDropdown(element) {
+      const content = element.nextElementSibling;
+      content.classList.toggle('hidden');
+    }
+
     const menuBtn = document.getElementById('menu-btn');
     menuBtn.addEventListener('click', () => {
       const nav = document.querySelector('nav');
