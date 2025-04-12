@@ -1,14 +1,132 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2575.4">
-  <style type="text/css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery | Akash Kumar Tarai</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .highlight {
+      color: #4B6E57;
+      font-weight: bold;
+    }
+    .content-block {
+      font-size: 1rem;
+      color: #1A1A1A;
+      text-align: justify;
+    }
+    .gallery-item {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+    .gallery-item img {
+      max-width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .description {
+      padding: 1.5rem;
+      font-size: 1rem;
+      color: #1A1A1A;
+      text-align: justify;
+    }
+    .left-image {
+      order: 1;
+    }
+    .right-image {
+      order: 0;
+    }
+    .image-container {
+      width: 70%;
+    }
+    .text-container {
+      width: 30%;
+    }
   </style>
 </head>
-<body>
+<body class="bg-[#f4f4f4] text-[#1A1A1A]">
+
+  <!-- Navigation -->
+  <header class="bg-[#4B6E57] shadow sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="index.html" class="text-white text-xl font-bold hover:text-[#20B2AA]">Akash Kumar Tarai</a>
+      <nav class="hidden md:flex space-x-8 text-lg font-semibold">
+        <a href="index.html" class="text-white hover:text-[#20B2AA]">Profile</a>
+        <a href="publications.html" class="text-white hover:text-[#20B2AA]">Publications</a>
+        <a href="awards.html" class="text-white hover:text-[#20B2AA]">Awards & Grants</a>
+        <a href="conferences.html" class="text-white hover:text-[#20B2AA]">Conferences & Workshops</a>
+        <a href="gallery.html" class="text-white hover:text-[#20B2AA]">Gallery</a>
+        <a href="contact.html" class="text-white hover:text-[#20B2AA]">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-5xl mx-auto px-6 py-12">
+
+    <!-- Gallery Entries -->
+    <section>
+      <div class="gallery-item">
+        <div class="image-container left-image">
+          <img src="path_to_image1.jpg" alt="Image 1" class="w-full h-auto">
+        </div>
+        <div class="text-container description">
+          <h3 class="text-xl font-semibold text-[#4B6E57]">Conference Presentation</h3>
+          <p>
+            This photo was taken during my presentation at the National Laser Symposium (NLS-33), where I shared my work on LIBS-based techniques for elemental analysis. It was a great opportunity to engage with fellow researchers in the field.
+          </p>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <div class="image-container right-image">
+          <img src="path_to_image2.jpg" alt="Image 2" class="w-full h-auto">
+        </div>
+        <div class="text-container description">
+          <h3 class="text-xl font-semibold text-[#4B6E57]">Workshop on Raman Spectroscopy</h3>
+          <p>
+            A snapshot from a workshop on Raman spectroscopy held at IISER Berhampur. The workshop provided a hands-on experience for participants to learn advanced Raman techniques and their applications in material science.
+          </p>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <div class="image-container left-image">
+          <img src="path_to_image3.jpg" alt="Image 3" class="w-full h-auto">
+        </div>
+        <div class="text-container description">
+          <h3 class="text-xl font-semibold text-[#4B6E57]">Field Work in Environmental Monitoring</h3>
+          <p>
+            Capturing data for environmental monitoring using portable LIBS systems in the field. This work was part of a project aimed at applying spectroscopy for real-time pollution detection and monitoring in remote areas.
+          </p>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <div class="image-container right-image">
+          <img src="path_to_image4.jpg" alt="Image 4" class="w-full h-auto">
+        </div>
+        <div class="text-container description">
+          <h3 class="text-xl font-semibold text-[#4B6E57]">Lab Work on Spectroscopic Instruments</h3>
+          <p>
+            This image shows me working on setting up a Raman spectrometer in the lab. The project focuses on developing new calibration methods for spectroscopic measurements in complex samples.
+          </p>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[#f4f4f4] py-6 text-center text-sm text-[#1A1A1A]">
+    © 2025 Akash Kumar Tarai, Postdoctoral Research Fellow, IISER Berhampur, India
+  </footer>
+
 </body>
 </html>
