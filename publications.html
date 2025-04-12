@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Akash Kumar Tarai</title>
+  <title>Publications | Akash Kumar Tarai</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
@@ -11,20 +11,9 @@
     body {
       font-family: 'Inter', sans-serif;
     }
-
-    /* Left side freeze on scroll for web version */
-    @media (min-width: 768px) {
-      .sticky-left {
-        position: sticky;
-        top: 20px; /* Adjust the top value as needed */
-        z-index: 10; /* Ensures it stays on top */
-      }
-    }
-
-    /* Make sure the right side scrolls */
-    .main-content {
-      overflow-y: auto;
-      max-height: calc(100vh - 60px); /* Keep the content scrollable with space for header */
+    .highlight {
+      color: #4B6E57;
+      font-weight: bold;
     }
   </style>
 </head>
@@ -51,7 +40,7 @@
         <i class="fas fa-bars"></i>
       </button>
     </div>
-
+    
     <!-- Mobile Menu Dropdown -->
     <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 space-y-2 text-white text-base font-medium">
       <a href="index.html" class="block hover:text-[#20B2AA]">Profile</a>
@@ -64,113 +53,85 @@
   </header>
 
   <!-- Main Section -->
-  <main class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-12">
+  <main class="max-w-7xl mx-auto px-6 py-12">
+    <h1 class="text-3xl font-semibold text-[#4B6E57] mb-6">Publications</h1>
 
-    <!-- Left: Photo and Contact (Sticky Section) -->
-    <aside class="col-span-1 flex flex-col items-center text-center sticky-left">
-      <img src="assets/my_photo.jpeg" alt="Your Photo" class="w-72 h-72 rounded-xl object-cover shadow-xl border-4 border-white mb-6">
-      <div class="text-2xl font-bold mb-1">Akash Kumar Tarai</div>
-      <div class="text-[#4B5563] text-base">Postdoctoral Research Fellow</div>
-      <div class="text-[#4B5563] text-base mb-4">IISER Berhampur, India</div>
-
-      <!-- Email Links -->
-      <p class="text-sm text-[#4B6E57] hover:text-[#20B2AA]">
-        <a href="mailto:akashktarai@gmail.com">akashktarai@gmail.com</a>
+    <!-- PhD Thesis Section -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold text-[#4B6E57] border-b-2 border-[#20B2AA] pb-2 mb-4">PhD Thesis</h2>
+      <p class="text-gray-700 mb-4">
+        My PhD thesis focused on the application of deep learning techniques for wavefront sensing in adaptive optics. It presents a novel approach to real-time wavefront reconstruction and improves the performance of adaptive optics systems.
       </p>
-      <p class="text-sm text-[#4B6E57] hover:text-[#20B2AA] mb-4">
-        <a href="mailto:akasht@iiserbpr.ac.in">akasht@iiserbpr.ac.in</a>
+      <p class="text-gray-700 mb-4">
+        The thesis includes a detailed study of machine learning techniques applied to wavefront sensing, along with experimental validation. It is available for download in PDF format and can also be accessed through INFLIBNET.
       </p>
-
-      <!-- Download CV Button -->
-      <a href="assets/CV.pdf" download class="mt-4 inline-block px-5 py-2 bg-[#4B6E57] text-white text-sm font-medium rounded-lg hover:bg-[#20B2AA] shadow">
-        <i class="fas fa-file-pdf mr-2"></i>Download CV
+      <a href="assets/Revised_Thesis_Akash.pdf" download class="inline-block text-white bg-[#4B6E57] hover:bg-[#20B2AA] px-6 py-2 rounded-lg text-sm font-medium mb-4">
+        <i class="fas fa-file-pdf mr-2"></i>Download PhD Thesis (PDF)
       </a>
-
-      <!-- Social Icons -->
-      <div class="flex justify-center space-x-6 text-[2.2rem] text-[#4B6E57] mt-6">
-        <a href="https://scholar.google.co.in/citations?user=3q74S1kAAAAJ&hl=en&oi=ao" target="_blank" title="Google Scholar" class="hover:text-[#20B2AA]">
-          <i class="fas fa-graduation-cap"></i>
-        </a>
-        <a href="https://www.researchgate.net/profile/Akash-Tarai?ev=hdr_xprf" target="_blank" title="ResearchGate" class="hover:text-[#20B2AA]">
-          <i class="fab fa-researchgate"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/akash-kumar-tarai-phd-74129b225/" target="_blank" title="LinkedIn" class="hover:text-[#20B2AA]">
-          <i class="fab fa-linkedin"></i>
-        </a>
-      </div>
-    </aside>
-
-    <!-- Right: Bio and Sections -->
-    <section class="col-span-2 space-y-10 main-content">
-      <!-- Biography -->
-      <div>
-        <h2 class="text-xl font-semibold border-b-2 border-[#20B2AA] pb-1 mb-3">Brief Biography</h2>
-        <p class="text-gray-700 leading-relaxed">
-          I am a Postdoctoral Research Fellow in the Department of Physical Sciences at Indian Institute of Science Education and Research (IISER), Berhampur, India, working on wavefront sensing using deep learning for adaptive optics applications. I obtained my PhD in Physics from the Advanced Centre of Research in High Energy Materials (ACRHEM), School of Physics, University of Hyderabad, India in 2024.
-        </p>
-        <p class="text-gray-700 leading-relaxed">
-          My research interests are Laser Produced Plasma Diagnostics, Laser-Induced Breakdown Spectroscopy (LIBS), Raman Spectroscopy, and application of Machine Learning and Deep Learning in Laser Spectroscopy and Adaptive Optics.
-        </p>
-      </div>
-
-      <!-- Research Areas -->
-      <div>
-        <h2 class="text-xl font-semibold border-b-2 border-[#20B2AA] pb-1 mb-3">Research Areas & Interests</h2>
-        <ul class="list-disc list-inside text-gray-700 space-y-1">
-          <li>Laser Produced Plasma</li>
-          <li>Laser Induced Breakdown Spectroscopy (LIBS)</li>
-          <li>Raman Spectroscopy</li>
-          <li>Wavefront Sensing in Adaptive Optics</li>
-          <li>Machine Learning and Deep Learning</li>
-        </ul>
-      </div>
-
-      <!-- Professional Experience -->
-      <div>
-        <h2 class="text-xl font-semibold border-b-2 border-[#20B2AA] pb-1 mb-3">Professional Experience</h2>
-        <div class="text-base text-gray-800 space-y-6">
-          <div class="border-l-4 border-[#4B6E57] pl-4">
-            <div class="flex justify-between items-center">
-              <span class="font-semibold">Postdoctoral Research Fellow</span>
-              <span class="text-sm text-gray-500">Dec 2024 – Present</span>
-            </div>
-            <span class="text-gray-700">Department of Physical Sciences, IISER Berhampur, India</span><br>
-            <span class="text-gray-600">Mentor: Dr. Vyas Akondi</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Education -->
-      <div>
-        <h2 class="text-xl font-semibold border-b-2 border-[#20B2AA] pb-1 mb-3">Education</h2>
-        <div class="text-base text-gray-800 space-y-4">
-          <div class="border-l-4 border-[#4B6E57] pl-4">
-            <div class="flex justify-between items-center">
-              <span class="font-semibold">Ph.D. in Physics</span>
-              <span class="text-sm text-gray-500">2024</span>
-            </div>
-            <span class="text-gray-700">University of Hyderabad, India</span><br>
-            <span class="text-gray-600">Mentor: Prof. Manoj Kumar Gundawar</span><br>
-            <a href="assets/Revised_Thesis_Akash.pdf" target="_blank" class="text-[#4B6E57] hover:text-[#20B2AA] underline text-sm">View Thesis</a>
-          </div>
-          <div class="border-l-4 border-[#4B6E57] pl-4">
-            <div class="flex justify-between items-center">
-              <span class="font-semibold">M.Sc. in Physics</span>
-              <span class="text-sm text-gray-500">2017</span>
-            </div>
-            <span class="text-gray-700">Pondicherry University, India</span>
-          </div>
-          <div class="border-l-4 border-[#4B6E57] pl-4">
-            <div class="flex justify-between items-center">
-              <span class="font-semibold">B.Sc. in Physics</span>
-              <span class="text-sm text-gray-500">2015</span>
-            </div>
-            <span class="text-gray-700">Ravenshaw University, India</span>
-          </div>
-        </div>
-      </div>
-
+      <p class="text-gray-700">
+        Access the full thesis through INFLIBNET: 
+        <a href="https://www.inflibnet.ac.in/" target="_blank" class="text-[#4B6E57] hover:text-[#20B2AA] font-semibold">INFLIBNET</a>
+      </p>
     </section>
+
+    <!-- Peer-reviewed Publications Section -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold text-[#4B6E57] border-b-2 border-[#20B2AA] pb-2 mb-4">Peer-reviewed Publications</h2>
+      <ul class="space-y-4 text-gray-700">
+        <li>
+          <span class="font-semibold">1.</span>
+          <a href="https://doi.org/10.1109/XXX.2024.1234567" target="_blank" class="hover:text-[#20B2AA]">
+            <span class="highlight">Akash Kumar Tarai</span>, et al., "Title of the Peer-reviewed Publication", <i>Journal Name</i>, vol. 12, no. 3, pp. 234-245, 2024. DOI: <span class="font-semibold">10.1109/XXX.2024.1234567</span>
+          </a>
+          <a href="https://doi.org/10.1109/XXX.2024.1234567" target="_blank" class="inline-block text-white bg-[#4B6E57] hover:bg-[#20B2AA] px-4 py-2 rounded-lg text-sm font-medium mt-2">[Link]</a>
+        </li>
+        <li>
+          <span class="font-semibold">2.</span>
+          <a href="https://doi.org/10.1109/YYY.2023.7654321" target="_blank" class="hover:text-[#20B2AA]">
+            <span class="highlight">Akash Kumar Tarai</span>, et al., "Another Title of Peer-reviewed Publication", <i>Another Journal</i>, vol. 11, no. 2, pp. 456-467, 2023. DOI: <span class="font-semibold">10.1109/YYY.2023.7654321</span>
+          </a>
+          <a href="https://doi.org/10.1109/YYY.2023.7654321" target="_blank" class="inline-block text-white bg-[#4B6E57] hover:bg-[#20B2AA] px-4 py-2 rounded-lg text-sm font-medium mt-2">[Link]</a>
+        </li>
+        <li>
+          <span class="font-semibold">3.</span>
+          <a href="https://doi.org/10.1109/ZZZ.2022.5678910" target="_blank" class="hover:text-[#20B2AA]">
+            <span class="highlight">Akash Kumar Tarai</span>, et al., "Yet Another Publication Title", <i>Journal of High-Energy Physics</i>, vol. 15, no. 1, pp. 123-134, 2022. DOI: <span class="font-semibold">10.1109/ZZZ.2022.5678910</span>
+          </a>
+          <a href="https://doi.org/10.1109/ZZZ.2022.5678910" target="_blank" class="inline-block text-white bg-[#4B6E57] hover:bg-[#20B2AA] px-4 py-2 rounded-lg text-sm font-medium mt-2">[Link]</a>
+        </li>
+        <!-- Add more publications here -->
+      </ul>
+    </section>
+
+    <!-- Conference Publications Section -->
+    <section>
+      <h2 class="text-2xl font-semibold text-[#4B6E57] border-b-2 border-[#20B2AA] pb-2 mb-4">Conference Publications</h2>
+      <ul class="space-y-4 text-gray-700">
+        <li>
+          <span class="font-semibold">1.</span>
+          <a href="https://www.example.com" target="_blank" class="hover:text-[#20B2AA]">
+            <span class="highlight">Akash Kumar Tarai</span>, et al., "Conference Paper Title", <i>Conference Name</i>, 2024.
+          </a>
+          <a href="https://www.example.com" target="_blank" class="inline-block text-white bg-[#4B6E57] hover:bg-[#20B2AA] px-4 py-2 rounded-lg text-sm font-medium mt-2">[Link]</a>
+        </li>
+        <li>
+          <span class="font-semibold">2.</span>
+          <a href="https://www.example.com" target="_blank" class="hover:text-[#20B2AA]">
+            <span class="highlight">Akash Kumar Tarai</span>, et al., "Conference Paper Title", <i>Conference Name</i>, 2023.
+          </a>
+          <a href="https://www.example.com" target="_blank" class="inline-block text-white bg-[#4B6E57] hover:bg-[#20B2AA] px-4 py-2 rounded-lg text-sm font-medium mt-2">[Link]</a>
+        </li>
+        <li>
+          <span class="font-semibold">3.</span>
+          <a href="https://www.example.com" target="_blank" class="hover:text-[#20B2AA]">
+            <span class="highlight">Akash Kumar Tarai</span>, et al., "Conference Paper Title", <i>Conference Name</i>, 2022.
+          </a>
+          <a href="https://www.example.com" target="_blank" class="inline-block text-white bg-[#4B6E57] hover:bg-[#20B2AA] px-4 py-2 rounded-lg text-sm font-medium mt-2">[Link]</a>
+        </li>
+        <!-- Add more conference publications here -->
+      </ul>
+    </section>
+
   </main>
 
   <!-- Footer -->
