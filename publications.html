@@ -25,10 +25,14 @@
       padding-left: 2em;
       text-indent: -2em;
       position: relative;
+      counter-increment: item;
     }
-    /* Remove the counter-increment and numbering */
     ol.custom-list li::before {
-      content: "";  /* This removes the automatic numbering */
+      content: counter(item) ". ";
+      font-weight: bold;
+      display: inline-block;
+      width: 2em;
+      color: #1A1A1A;
     }
   </style>
 </head>
@@ -81,12 +85,12 @@
         <ol class="custom-list text-gray-800">
           <li>
             <a href="https://doi.org/10.1109/XXX.2024.1234567" target="_blank" class="hover:text-[#20B2AA]">
-              2. &nbsp; D. Sharma, <span class="highlight">Akash Kumar Tarai</span>, M. R. Naik, G. Manoj Kumar, "Title of the Peer-reviewed Publication", <i>Journal Name</i>, vol. 12, no. 3, pp. 123-130, 2024.
+              D. Sharma, <span class="highlight">Akash Kumar Tarai</span>, M. R. Naik, G. Manoj Kumar, "Title of the Peer-reviewed Publication", <i>Journal Name</i>, vol. 12, no. 3, pp. 123-130, 2024.
             </a>
           </li>
           <li>
             <a href="https://doi.org/10.1016/j.spectrochemica.2023.123456" target="_blank" class="hover:text-[#20B2AA]">
-              1. &nbsp; <span class="highlight">Akash Kumar Tarai</span>, S. V. Rao, "Advances in LIBS Techniques for Geological Applications", <i>Spectrochimica Acta Part B</i>, vol. 200, 2023.
+              <span class="highlight">Akash Kumar Tarai</span>, S. V. Rao, "Advances in LIBS Techniques for Geological Applications", <i>Spectrochimica Acta Part B</i>, vol. 200, 2023.
             </a>
           </li>
         </ol>
@@ -102,7 +106,7 @@
         <ol class="custom-list text-gray-800">
           <li>
             <a href="https://link.springer.com/chapter/10.1007/978-3-031-12345-6_7" target="_blank" class="hover:text-[#20B2AA]">
-              1. &nbsp; <span class="highlight">Akash Kumar Tarai</span>, S. V. Rao, "Machine Learning Assisted LIBS for Environmental Monitoring", in <i>Laser Applications in Environmental Science</i>, Springer, 2023.
+              <span class="highlight">Akash Kumar Tarai</span>, S. V. Rao, "Machine Learning Assisted LIBS for Environmental Monitoring", in <i>Laser Applications in Environmental Science</i>, Springer, 2023.
             </a>
           </li>
         </ol>
