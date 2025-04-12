@@ -15,8 +15,10 @@
     /* Make the left section sticky on the web version */
     @media (min-width: 768px) {
       .sticky-left {
+        position: -webkit-sticky; /* For Safari */
         position: sticky;
         top: 20px; /* Adjust the top value as needed */
+        z-index: 10; /* Ensures it stays on top */
       }
     }
   </style>
