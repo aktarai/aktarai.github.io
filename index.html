@@ -11,43 +11,57 @@
     body {
       font-family: 'Inter', sans-serif;
     }
+    @media (min-width: 768px) {
+      .sticky-sidebar {
+        position: sticky;
+        top: 100px;
+        align-self: start;
+      }
+    }
   </style>
 </head>
 <body class="bg-[#f4f4f4] text-[#1A1A1A]">
 
   <!-- Navigation -->
   <header class="bg-[#4B6E57] shadow sticky top-0 z-50">
-    <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-      <div class="text-white text-xl font-bold">Akash Kumar Tarai</div>
-
-      <!-- Hamburger for mobile -->
-      <div class="md:hidden">
-        <button id="menu-btn" class="text-white text-2xl focus:outline-none">
-          <i class="fas fa-bars"></i>
-        </button>
-      </div>
-
-      <!-- Nav Links for Desktop -->
-      <div class="hidden md:flex space-x-8 text-lg font-semibold">
-        <a href="index.html" class="text-white hover:text-[#20B2AA]">Home</a>
+    <nav class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center text-lg font-semibold">
+      <a href="index.html" class="text-white text-xl hover:text-[#20B2AA]">Akash Kumar Tarai</a>
+      <div class="hidden md:flex space-x-8">
+        <div class="relative group">
+          <a href="#" class="text-white hover:text-[#20B2AA]">About Me</a>
+          <div class="absolute hidden group-hover:block bg-white text-[#1A1A1A] mt-2 rounded shadow-lg py-2 w-56">
+            <a href="#biography" class="block px-4 py-2 hover:bg-gray-100">Brief Biography</a>
+            <a href="#interests" class="block px-4 py-2 hover:bg-gray-100">Research Interests</a>
+            <a href="#experience" class="block px-4 py-2 hover:bg-gray-100">Professional Experience</a>
+            <a href="#education" class="block px-4 py-2 hover:bg-gray-100">Education</a>
+          </div>
+        </div>
         <a href="publications.html" class="text-white hover:text-[#20B2AA]">Publications</a>
         <a href="awards.html" class="text-white hover:text-[#20B2AA]">Awards & Grants</a>
         <a href="conferences.html" class="text-white hover:text-[#20B2AA]">Conferences & Workshops</a>
         <a href="gallery.html" class="text-white hover:text-[#20B2AA]">Gallery</a>
         <a href="contact.html" class="text-white hover:text-[#20B2AA]">Contact</a>
       </div>
+
+      <!-- Mobile Menu Button -->
+      <div class="md:hidden">
+        <button id="menu-btn" class="text-white text-2xl focus:outline-none">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
     </nav>
 
-    <!-- Mobile Menu (hidden by default) -->
-    <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
-      <div class="flex flex-col space-y-3 text-lg font-semibold text-white">
-        <a href="index.html" class="hover:text-[#20B2AA]">Home</a>
-        <a href="publications.html" class="hover:text-[#20B2AA]">Publications</a>
-        <a href="awards.html" class="hover:text-[#20B2AA]">Awards & Grants</a>
-        <a href="conferences.html" class="hover:text-[#20B2AA]">Conferences & Workshops</a>
-        <a href="gallery.html" class="hover:text-[#20B2AA]">Gallery</a>
-        <a href="contact.html" class="hover:text-[#20B2AA]">Contact</a>
-      </div>
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="md:hidden hidden px-6 pb-4 space-y-2 bg-[#4B6E57]">
+      <a href="#biography" class="block text-white hover:text-[#20B2AA]">Brief Biography</a>
+      <a href="#interests" class="block text-white hover:text-[#20B2AA]">Research Interests</a>
+      <a href="#experience" class="block text-white hover:text-[#20B2AA]">Professional Experience</a>
+      <a href="#education" class="block text-white hover:text-[#20B2AA]">Education</a>
+      <a href="publications.html" class="block text-white hover:text-[#20B2AA]">Publications</a>
+      <a href="awards.html" class="block text-white hover:text-[#20B2AA]">Awards & Grants</a>
+      <a href="conferences.html" class="block text-white hover:text-[#20B2AA]">Conferences & Workshops</a>
+      <a href="gallery.html" class="block text-white hover:text-[#20B2AA]">Gallery</a>
+      <a href="contact.html" class="block text-white hover:text-[#20B2AA]">Contact</a>
     </div>
   </header>
 
@@ -55,12 +69,13 @@
   <main class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-12">
 
     <!-- Left: Photo and Contact -->
-    <aside class="col-span-1 flex flex-col items-center text-center">
+    <aside class="col-span-1 flex flex-col items-center text-center sticky-sidebar">
       <img src="assets/my_photo.jpeg" alt="Your Photo" class="w-72 h-72 rounded-xl object-cover shadow-xl border-4 border-white mb-6">
       <div class="text-2xl font-bold mb-1">Akash Kumar Tarai</div>
       <div class="text-[#4B5563] text-base">Postdoctoral Research Fellow</div>
       <div class="text-[#4B5563] text-base mb-4">IISER Berhampur, India</div>
 
+      <!-- Email Links -->
       <p class="text-sm text-[#4B6E57] hover:text-[#20B2AA]">
         <a href="mailto:akashktarai@gmail.com">akashktarai@gmail.com</a>
       </p>
@@ -68,10 +83,12 @@
         <a href="mailto:akasht@iiserbpr.ac.in">akasht@iiserbpr.ac.in</a>
       </p>
 
+      <!-- Download CV Button -->
       <a href="assets/CV.pdf" download class="mt-4 inline-block px-5 py-2 bg-[#4B6E57] text-white text-sm font-medium rounded-lg hover:bg-[#20B2AA] shadow">
         <i class="fas fa-file-pdf mr-2"></i>Download CV
       </a>
 
+      <!-- Social Icons -->
       <div class="flex justify-center space-x-6 text-[2.2rem] text-[#4B6E57] mt-6">
         <a href="https://scholar.google.co.in/citations?user=3q74S1kAAAAJ&hl=en&oi=ao" target="_blank" title="Google Scholar" class="hover:text-[#20B2AA]">
           <i class="fas fa-graduation-cap"></i>
@@ -88,7 +105,8 @@
     <!-- Right: Bio and Sections -->
     <section class="col-span-2 space-y-10">
 
-      <div>
+      <!-- Biography -->
+      <div id="biography">
         <h2 class="text-xl font-semibold border-b-2 border-[#20B2AA] pb-1 mb-3">Brief Biography</h2>
         <p class="text-gray-700 leading-relaxed">
           I am a Postdoctoral Research Fellow in the Department of Physical Sciences at Indian Institute of Science Education and Research (IISER), Berhampur, India, working on wavefront sensing using deep learning for adaptive optics applications. I obtained my PhD in Physics from the Advanced Centre of Research in High Energy Materials (ACRHEM), School of Physics, University of Hyderabad, India in 2024.
@@ -98,7 +116,8 @@
         </p>
       </div>
 
-      <div>
+      <!-- Research Areas -->
+      <div id="interests">
         <h2 class="text-xl font-semibold border-b-2 border-[#20B2AA] pb-1 mb-3">Research Areas & Interests</h2>
         <ul class="list-disc list-inside text-gray-700 space-y-1">
           <li>Laser Produced Plasma</li>
@@ -109,7 +128,8 @@
         </ul>
       </div>
 
-      <div>
+      <!-- Professional Experience -->
+      <div id="experience">
         <h2 class="text-xl font-semibold border-b-2 border-[#20B2AA] pb-1 mb-3">Professional Experience</h2>
         <div class="text-base text-gray-800 space-y-6">
           <div class="border-l-4 border-[#4B6E57] pl-4">
@@ -123,7 +143,8 @@
         </div>
       </div>
 
-      <div>
+      <!-- Education -->
+      <div id="education">
         <h2 class="text-xl font-semibold border-b-2 border-[#20B2AA] pb-1 mb-3">Education</h2>
         <div class="text-base text-gray-800 space-y-4">
           <div class="border-l-4 border-[#4B6E57] pl-4">
@@ -160,15 +181,12 @@
     © 2025 Akash Kumar Tarai, Postdoctoral Research Fellow, IISER Berhampur, India
   </footer>
 
-  <!-- Hamburger Menu Script -->
+  <!-- JS for Mobile Menu -->
   <script>
-    const menuBtn = document.getElementById('menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-
-    menuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
+    document.getElementById('menu-btn').addEventListener('click', () => {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
     });
   </script>
-
 </body>
 </html>
