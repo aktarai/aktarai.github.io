@@ -12,14 +12,19 @@
       font-family: 'Inter', sans-serif;
     }
 
-    /* Make the left section sticky on the web version */
+    /* Left side freeze on scroll for web version */
     @media (min-width: 768px) {
       .sticky-left {
-        position: -webkit-sticky; /* For Safari */
         position: sticky;
         top: 20px; /* Adjust the top value as needed */
         z-index: 10; /* Ensures it stays on top */
       }
+    }
+
+    /* Make sure the right side scrolls */
+    .main-content {
+      overflow-y: auto;
+      max-height: calc(100vh - 60px); /* Keep the content scrollable with space for header */
     }
   </style>
 </head>
@@ -61,7 +66,7 @@
   <!-- Main Section -->
   <main class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-12">
 
-    <!-- Left: Photo and Contact -->
+    <!-- Left: Photo and Contact (Sticky Section) -->
     <aside class="col-span-1 flex flex-col items-center text-center sticky-left">
       <img src="assets/my_photo.jpeg" alt="Your Photo" class="w-72 h-72 rounded-xl object-cover shadow-xl border-4 border-white mb-6">
       <div class="text-2xl font-bold mb-1">Akash Kumar Tarai</div>
@@ -96,8 +101,7 @@
     </aside>
 
     <!-- Right: Bio and Sections -->
-    <section class="col-span-2 space-y-10">
-
+    <section class="col-span-2 space-y-10 main-content">
       <!-- Biography -->
       <div>
         <h2 class="text-xl font-semibold border-b-2 border-[#20B2AA] pb-1 mb-3">Brief Biography</h2>
@@ -105,7 +109,7 @@
           I am a Postdoctoral Research Fellow in the Department of Physical Sciences at Indian Institute of Science Education and Research (IISER), Berhampur, India, working on wavefront sensing using deep learning for adaptive optics applications. I obtained my PhD in Physics from the Advanced Centre of Research in High Energy Materials (ACRHEM), School of Physics, University of Hyderabad, India in 2024.
         </p>
         <p class="text-gray-700 leading-relaxed">
-          My research interests are Laser Produced Plasma Diagnostics, Laser-Induced Breakdown Spectroscopy (LIBS), Raman Spectroscopy and application of Machine Learning and Deep Learning in Laser Spectroscopy and Adaptive Optics.
+          My research interests are Laser Produced Plasma Diagnostics, Laser-Induced Breakdown Spectroscopy (LIBS), Raman Spectroscopy, and application of Machine Learning and Deep Learning in Laser Spectroscopy and Adaptive Optics.
         </p>
       </div>
 
