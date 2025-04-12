@@ -15,9 +15,15 @@
     /* Left side freeze on scroll for web version */
     @media (min-width: 768px) {
       .sticky-left {
-        position: sticky;
+        position: fixed;
         top: 20px; /* Adjust the top value as needed */
-        z-index: 10; /* Ensures it stays on top */
+        width: 280px; /* Set width of the sticky left part */
+        z-index: 10; /* Ensure it stays on top */
+        max-height: calc(100vh - 40px); /* Keeps the left side from overflowing */
+      }
+
+      .main-content {
+        margin-left: 300px; /* Space for sticky left section */
       }
     }
 
