@@ -17,22 +17,23 @@
     }
     ol.custom-list {
       counter-reset: item;
-      padding-left: 0;
+      padding-left: 1.5rem;
     }
     ol.custom-list li {
       list-style: none;
-      margin-bottom: 1.2rem;
-      padding-left: 2em;
-      text-indent: -2em;
       position: relative;
       counter-increment: item;
+      margin-bottom: 1.2rem;
+      padding-left: 1.8rem;
+      text-indent: 0;
     }
     ol.custom-list li::before {
-      content: counter(item) ". ";
-      font-weight: bold;
-      display: inline-block;
-      width: 2em;
+      content: counter(item) ".";
+      position: absolute;
+      left: 0;
       color: #1A1A1A;
+      font-weight: normal;
+      font-family: inherit;
     }
   </style>
 </head>
