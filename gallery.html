@@ -23,15 +23,17 @@
       display: flex;
       flex-wrap: wrap;
       margin-bottom: 2rem;
+      align-items: center; /* Ensures the text is centered vertically */
     }
     .gallery-item img {
       max-width: 100%;
+      height: auto;
       border-radius: 8px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
     .description {
       padding: 1.5rem;
-      font-size: 1rem;
+      font-size: 0.875rem; /* Decreased font size */
       color: #1A1A1A;
       text-align: justify;
     }
@@ -42,10 +44,12 @@
       order: 0;
     }
     .image-container {
-      width: 70%;
+      width: 70%; /* Set the width for the image container */
+      max-width: 100%; /* Ensure it doesn't exceed the container width */
     }
     .text-container {
-      width: 30%;
+      width: 30%; /* Set the width for the text container */
+      padding-left: 1.5rem;
     }
   </style>
 </head>
