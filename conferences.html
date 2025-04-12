@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Conferences & Workshops | Akash Kumar Tarai</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
@@ -37,6 +37,10 @@
       color: #1A1A1A;
       font-weight: normal;
     }
+    ol.custom-list.reverse {
+      display: flex;
+      flex-direction: column-reverse;
+    }
     .content-block {
       font-size: 1rem;
       color: #1A1A1A;
@@ -54,7 +58,6 @@
 </head>
 <body class="bg-[#f4f4f4] text-[#1A1A1A]">
 
-  <!-- Navigation -->
   <header class="bg-[#4B6E57] shadow sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
       <a href="index.html" class="text-white text-xl font-bold hover:text-[#20B2AA]">Akash Kumar Tarai</a>
@@ -72,59 +75,46 @@
     </div>
   </header>
 
-  <!-- Main Content -->
   <main class="max-w-5xl mx-auto px-6 py-12 space-y-12">
 
-    <!-- Conferences Section -->
     <section>
       <h2 class="text-xl font-semibold text-[#4B6E57] border-b-2 border-[#20B2AA] pb-2">Conferences</h2>
       <div class="mt-4 content-block">
-        <ol class="custom-list reverse">
+        <ol class="custom-list reverse" start="4">
+          <li class="hidden toggle-conference">Attended Indo-US Symposium on Advanced Optical Diagnostics, 2021.</li>
+          <li class="hidden toggle-conference">Contributed to Young Researchers Meet on Photonics, 2022, Hyderabad.</li>
+          <li>Delivered oral presentation at International Conference on Optics and Photonics, 2023.</li>
           <li><span class="highlight">Akash Kumar Tarai</span>, Presented at National Laser Symposium (NLS-33), 2025, RRCAT, Indore.</li>
-          <li><span class="highlight">Akash Kumar Tarai</span>, Delivered oral presentation at International Conference on Optics and Photonics, 2023.</li>
         </ol>
-        <div id="more-conferences" class="hidden mt-4">
-          <ol class="custom-list reverse">
-            <li><span class="highlight">Akash Kumar Tarai</span>, Contributed to Young Researchers Meet on Photonics, 2022, Hyderabad.</li>
-            <li><span class="highlight">Akash Kumar Tarai</span>, Attended Indo-US Symposium on Advanced Optical Diagnostics, 2021.</li>
-          </ol>
-        </div>
-        <p class="see-more-btn mt-2" onclick="toggleSection('more-conferences', this)">See more</p>
+        <p class="see-more-btn mt-2" onclick="toggleItems('toggle-conference', this)">See more</p>
       </div>
     </section>
 
-    <!-- Workshops Section -->
     <section>
       <h2 class="text-xl font-semibold text-[#4B6E57] border-b-2 border-[#20B2AA] pb-2">Workshops</h2>
       <div class="mt-4 content-block">
-        <ol class="custom-list reverse">
-          <li>Attended "Workshop on Spectroscopic Techniques", IISc Bangalore, 2022.</li>
+        <ol class="custom-list reverse" start="4">
+          <li class="hidden toggle-workshop">Joined "Data Analysis in Optical Diagnostics", IIT Delhi, 2019.</li>
+          <li class="hidden toggle-workshop">Completed "Laser Safety and Applications Workshop", BARC Training School, 2020.</li>
           <li>Participated in "Hands-on Training in Raman Spectroscopy", UOH, 2021.</li>
+          <li>Attended "Workshop on Spectroscopic Techniques", IISc Bangalore, 2022.</li>
         </ol>
-        <div id="more-workshops" class="hidden mt-4">
-          <ol class="custom-list reverse">
-            <li>Completed "Laser Safety and Applications Workshop", BARC Training School, 2020.</li>
-            <li>Joined "Data Analysis in Optical Diagnostics", IIT Delhi, 2019.</li>
-          </ol>
-        </div>
-        <p class="see-more-btn mt-2" onclick="toggleSection('more-workshops', this)">See more</p>
+        <p class="see-more-btn mt-2" onclick="toggleItems('toggle-workshop', this)">See more</p>
       </div>
     </section>
 
   </main>
 
-  <!-- Footer -->
   <footer class="bg-[#f4f4f4] py-6 text-center text-sm text-[#1A1A1A]">
     © 2025 Akash Kumar Tarai, Postdoctoral Research Fellow, IISER Berhampur, India
   </footer>
 
-  <!-- Script -->
   <script>
-    function toggleSection(id, btn) {
-      const section = document.getElementById(id);
-      const isHidden = section.classList.contains('hidden');
-      section.classList.toggle('hidden');
-      btn.innerText = isHidden ? 'See less' : 'See more';
+    function toggleItems(className, btn) {
+      const items = document.querySelectorAll('.' + className);
+      const hidden = [...items].some(el => el.classList.contains('hidden'));
+      items.forEach(el => el.classList.toggle('hidden'));
+      btn.innerText = hidden ? 'See less' : 'See more';
     }
 
     const menuBtn = document.getElementById('menu-btn');
