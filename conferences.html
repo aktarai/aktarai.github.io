@@ -16,7 +16,8 @@
       font-weight: bold;
     }
     ol.custom-list {
-      padding-left: 0rem;
+      counter-reset: item; /* Start the counter from 1 */
+      padding-left: 0rem; /* Set padding to 0rem for maximum left alignment */
       list-style: none;
     }
     ol.custom-list li {
@@ -29,11 +30,16 @@
       color: #1A1A1A;
     }
     ol.custom-list li::before {
-      content: counter(item, decimal) ".";
+      content: counter(item) ".";
       position: absolute;
       left: 0;
       top: 0;
       color: #1A1A1A;
+      font-weight: normal;
+    }
+    ol.custom-list.reverse {
+      display: flex;
+      flex-direction: column-reverse; /* Reverse the order of items */
     }
     .content-block {
       font-size: 1rem;
@@ -41,9 +47,6 @@
       padding-left: 1.5rem;
       padding-right: 1.5rem;
       text-align: justify;
-    }
-    .hidden-content {
-      display: none;
     }
   </style>
 </head>
