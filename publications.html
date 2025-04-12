@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Conferences & Workshops | Akash Kumar Tarai</title>
+  <title>Publications | Akash Kumar Tarai</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
@@ -16,9 +16,11 @@
       font-weight: bold;
     }
     ol.custom-list {
-      list-style: none;
-      padding-left: 0rem;
       counter-reset: item;
+      padding-left: 0rem;
+      list-style: none;
+      display: flex;
+      flex-direction: column-reverse;
     }
     ol.custom-list li {
       counter-increment: item;
@@ -30,7 +32,7 @@
       color: #1A1A1A;
     }
     ol.custom-list li::before {
-      content: attr(data-number) ".";
+      content: counter(item) ".";
       position: absolute;
       left: 0;
       top: 0;
@@ -43,7 +45,7 @@
       padding-right: 1.5rem;
       text-align: justify;
     }
-    .hidden-content {
+    .hidden-entry {
       display: none;
     }
   </style>
@@ -71,43 +73,9 @@
   <!-- Main Content -->
   <main class="max-w-5xl mx-auto px-6 py-12 space-y-12">
 
-    <!-- Conferences Section -->
+    <!-- PhD Thesis Section -->
     <section>
-      <h2 class="text-xl font-semibold text-[#4B6E57] border-b-2 border-[#20B2AA] pb-2">
-        Conferences
-      </h2>
-      <div class="mt-4 content-block">
-        <ol class="custom-list" id="conference-list">
-          <li data-number="4"><span class="highlight">Akash Kumar Tarai</span>, Presented research at the International Conference on Photonics, 2024.</li>
-          <li data-number="3"><span class="highlight">Akash Kumar Tarai</span>, Delivered an invited talk at the National Laser Symposium (NLS), 2023.</li>
-          <li data-number="2" class="hidden-content"><span class="highlight">Akash Kumar Tarai</span>, Participated in the Indo-French Workshop on Spectroscopy, 2022.</li>
-          <li data-number="1" class="hidden-content"><span class="highlight">Akash Kumar Tarai</span>, Contributed poster at the Asia-Pacific Optical Congress, 2021.</li>
-        </ol>
-        <button onclick="toggleMore('conference-list', this)" class="mt-4 text-sm text-[#4B6E57] hover:text-[#20B2AA] font-semibold">See more</button>
-      </div>
-    </section>
-
-    <!-- Workshops Section -->
-    <section>
-      <h2 class="text-xl font-semibold text-[#4B6E57] border-b-2 border-[#20B2AA] pb-2">
-        Workshops
-      </h2>
-      <div class="mt-4 content-block">
-        <ol class="custom-list" id="workshop-list">
-          <li data-number="4"><span class="highlight">Akash Kumar Tarai</span>, Hands-on workshop on Raman Spectroscopy, IISc Bangalore, 2024.</li>
-          <li data-number="3"><span class="highlight">Akash Kumar Tarai</span>, National Workshop on LIBS and Optical Techniques, Hyderabad, 2023.</li>
-          <li data-number="2" class="hidden-content"><span class="highlight">Akash Kumar Tarai</span>, Online Workshop on Advanced Data Analysis in Spectroscopy, 2022.</li>
-          <li data-number="1" class="hidden-content"><span class="highlight">Akash Kumar Tarai</span>, Winter School on Photonics and Optical Instrumentation, 2021.</li>
-        </ol>
-        <button onclick="toggleMore('workshop-list', this)" class="mt-4 text-sm text-[#4B6E57] hover:text-[#20B2AA] font-semibold">See more</button>
-      </div>
-    </section>
-
-    <!-- Thesis Section -->
-    <section>
-      <h2 class="text-xl font-semibold text-[#4B6E57] border-b-2 border-[#20B2AA] pb-2">
-        PhD Thesis
-      </h2>
+      <h2 class="text-xl font-semibold text-[#4B6E57] border-b-2 border-[#20B2AA] pb-2">PhD Thesis</h2>
       <div class="mt-4 content-block">
         <p class="mb-1 leading-relaxed">
           <a href="http://hdl.handle.net/10603/596075" target="_blank" class="hover:text-[#20B2AA]">
@@ -120,6 +88,40 @@
       </div>
     </section>
 
+    <!-- Peer-reviewed Publications Section -->
+    <section>
+      <h2 class="text-xl font-semibold text-[#4B6E57] border-b-2 border-[#20B2AA] pb-2">Peer-reviewed Publications</h2>
+      <div class="mt-4 content-block">
+        <ol class="custom-list" id="peer-reviewed-list">
+          <li>
+            <a href="https://doi.org/10.1109/XXX.2024.1234567" target="_blank" class="hover:text-[#20B2AA]">
+              D. Sharma, <span class="highlight">Akash Kumar Tarai</span>, M. R. Naik, G. Manoj Kumar, "Title of the Peer-reviewed Publication", <i>Journal Name</i>, vol. 12, no. 3, pp. 123-130, 2024.
+            </a>
+          </li>
+          <li class="hidden-entry">
+            <a href="https://doi.org/10.1016/j.spectrochemica.2023.123456" target="_blank" class="hover:text-[#20B2AA]">
+              <span class="highlight">Akash Kumar Tarai</span>, S. V. Rao, "Advances in LIBS Techniques for Geological Applications", <i>Spectrochimica Acta Part B</i>, vol. 200, 2023.
+            </a>
+          </li>
+        </ol>
+        <button onclick="toggleEntries('peer-reviewed-list', this)" class="mt-2 text-sm text-[#4B6E57] hover:text-[#20B2AA] font-semibold">See more</button>
+      </div>
+    </section>
+
+    <!-- Conference Publications Section -->
+    <section>
+      <h2 class="text-xl font-semibold text-[#4B6E57] border-b-2 border-[#20B2AA] pb-2">Conference Publications</h2>
+      <div class="mt-4 content-block">
+        <ol class="custom-list" id="conference-list">
+          <li>
+            <a href="https://link.springer.com/chapter/10.1007/978-3-031-12345-6_7" target="_blank" class="hover:text-[#20B2AA]">
+              <span class="highlight">Akash Kumar Tarai</span>, S. V. Rao, "Machine Learning Assisted LIBS for Environmental Monitoring", in <i>Laser Applications in Environmental Science</i>, Springer, 2023.
+            </a>
+          </li>
+        </ol>
+      </div>
+    </section>
+
   </main>
 
   <!-- Footer -->
@@ -129,13 +131,15 @@
 
   <!-- Script -->
   <script>
-    function toggleMore(listId, btn) {
+    function toggleEntries(listId, btn) {
       const list = document.getElementById(listId);
-      const items = list.querySelectorAll('.hidden-content');
-      const isHidden = items[0].style.display === 'none' || items[0].style.display === '';
-      items.forEach(item => {
+      const hiddenItems = list.querySelectorAll('.hidden-entry');
+      const isHidden = hiddenItems[0].style.display === 'none' || hiddenItems[0].style.display === '';
+
+      hiddenItems.forEach(item => {
         item.style.display = isHidden ? 'list-item' : 'none';
       });
+
       btn.innerText = isHidden ? 'See less' : 'See more';
     }
 
