@@ -77,7 +77,7 @@
         Conferences
       </h2>
       <div class="mt-4 content-block">
-        <ol class="custom-list" style="counter-reset: item 12;">
+        <ol class="custom-list">
           <li>
             <span class="highlight">Akash Kumar Tarai</span>, Presented research at the International Conference on Photonics, 2024.
           </li>
@@ -85,7 +85,7 @@
             <span class="highlight">Akash Kumar Tarai</span>, Delivered an invited talk at the National Laser Symposium (NLS), 2023.
           </li>
         </ol>
-        <ol class="custom-list hidden-content" id="more-conferences" style="counter-reset: item 10;">
+        <ol class="custom-list hidden-content" id="more-conferences">
           <li>
             <span class="highlight">Akash Kumar Tarai</span>, Participated in the Indo-French Workshop on Spectroscopy, 2022.
           </li>
@@ -103,7 +103,7 @@
         Workshops
       </h2>
       <div class="mt-4 content-block">
-        <ol class="custom-list" style="counter-reset: item 6;">
+        <ol class="custom-list">
           <li>
             <span class="highlight">Akash Kumar Tarai</span>, Hands-on workshop on Raman Spectroscopy, IISc Bangalore, 2024.
           </li>
@@ -111,7 +111,7 @@
             <span class="highlight">Akash Kumar Tarai</span>, National Workshop on LIBS and Optical Techniques, Hyderabad, 2023.
           </li>
         </ol>
-        <ol class="custom-list hidden-content" id="more-workshops" style="counter-reset: item 4;">
+        <ol class="custom-list hidden-content" id="more-workshops">
           <li>
             <span class="highlight">Akash Kumar Tarai</span>, Online Workshop on Advanced Data Analysis in Spectroscopy, 2022.
           </li>
@@ -135,8 +135,7 @@
     function toggleMore(id, btn) {
       const section = document.getElementById(id);
       if (section.style.display === 'none' || section.style.display === '') {
-        section.style.display = 'flex';
-        section.style.flexDirection = 'column-reverse';
+        section.style.display = 'block';
         btn.innerText = 'See less';
       } else {
         section.style.display = 'none';
