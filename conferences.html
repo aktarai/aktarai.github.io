@@ -37,16 +37,18 @@
       color: #1A1A1A;
       font-weight: normal;
     }
-    ol.custom-list.reverse {
-      display: flex;
-      flex-direction: column-reverse;
-    }
     .content-block {
       font-size: 1rem;
       color: #1A1A1A;
       padding-left: 1.5rem;
       padding-right: 1.5rem;
       text-align: justify;
+    }
+    .see-more-btn {
+      color: #20B2AA;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.95rem;
     }
   </style>
 </head>
@@ -75,27 +77,37 @@
 
     <!-- Conferences Section -->
     <section>
-      <h2 onclick="toggleDropdown(this)" class="text-xl font-semibold text-[#4B6E57] border-b-2 border-[#20B2AA] pb-2 cursor-pointer">
-        Conferences
-      </h2>
-      <div class="mt-4 hidden content-block">
+      <h2 class="text-xl font-semibold text-[#4B6E57] border-b-2 border-[#20B2AA] pb-2">Conferences</h2>
+      <div class="mt-4 content-block">
         <ol class="custom-list reverse">
           <li><span class="highlight">Akash Kumar Tarai</span>, Presented at National Laser Symposium (NLS-33), 2025, RRCAT, Indore.</li>
           <li><span class="highlight">Akash Kumar Tarai</span>, Delivered oral presentation at International Conference on Optics and Photonics, 2023.</li>
         </ol>
+        <div id="more-conferences" class="hidden mt-4">
+          <ol class="custom-list reverse">
+            <li><span class="highlight">Akash Kumar Tarai</span>, Contributed to Young Researchers Meet on Photonics, 2022, Hyderabad.</li>
+            <li><span class="highlight">Akash Kumar Tarai</span>, Attended Indo-US Symposium on Advanced Optical Diagnostics, 2021.</li>
+          </ol>
+        </div>
+        <p class="see-more-btn mt-2" onclick="toggleSection('more-conferences', this)">See more</p>
       </div>
     </section>
 
     <!-- Workshops Section -->
     <section>
-      <h2 onclick="toggleDropdown(this)" class="text-xl font-semibold text-[#4B6E57] border-b-2 border-[#20B2AA] pb-2 cursor-pointer">
-        Workshops
-      </h2>
-      <div class="mt-4 hidden content-block">
+      <h2 class="text-xl font-semibold text-[#4B6E57] border-b-2 border-[#20B2AA] pb-2">Workshops</h2>
+      <div class="mt-4 content-block">
         <ol class="custom-list reverse">
-          <li>Attended "Workshop on Spectroscopic Techniques" at IISc Bangalore, 2022.</li>
+          <li>Attended "Workshop on Spectroscopic Techniques", IISc Bangalore, 2022.</li>
           <li>Participated in "Hands-on Training in Raman Spectroscopy", UOH, 2021.</li>
         </ol>
+        <div id="more-workshops" class="hidden mt-4">
+          <ol class="custom-list reverse">
+            <li>Completed "Laser Safety and Applications Workshop", BARC Training School, 2020.</li>
+            <li>Joined "Data Analysis in Optical Diagnostics", IIT Delhi, 2019.</li>
+          </ol>
+        </div>
+        <p class="see-more-btn mt-2" onclick="toggleSection('more-workshops', this)">See more</p>
       </div>
     </section>
 
@@ -106,11 +118,13 @@
     © 2025 Akash Kumar Tarai, Postdoctoral Research Fellow, IISER Berhampur, India
   </footer>
 
-  <!-- Scripts -->
+  <!-- Script -->
   <script>
-    function toggleDropdown(element) {
-      const content = element.nextElementSibling;
-      content.classList.toggle('hidden');
+    function toggleSection(id, btn) {
+      const section = document.getElementById(id);
+      const isHidden = section.classList.contains('hidden');
+      section.classList.toggle('hidden');
+      btn.innerText = isHidden ? 'See less' : 'See more';
     }
 
     const menuBtn = document.getElementById('menu-btn');
