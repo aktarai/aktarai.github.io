@@ -15,8 +15,16 @@
       color: #4B6E57;
       font-weight: bold;
     }
-    .content-section {
+    .dropdown-content {
       display: none;
+      padding: 1rem;
+      background-color: #f4f4f4;
+      border: 1px solid #ddd;
+      margin-top: 0.5rem;
+      border-radius: 0.5rem;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
     }
   </style>
 </head>
@@ -57,84 +65,88 @@
 
   <!-- Main Section -->
   <main class="max-w-7xl mx-auto px-6 py-12">
+    <!-- PhD Thesis Section with Dropdown -->
     <section class="mb-12">
-      <h2 class="text-2xl font-semibold text-[#4B6E57] border-b-2 border-[#20B2AA] pb-2 mb-4 cursor-pointer" onclick="toggleSection('thesis')">
-        PhD Thesis
-      </h2>
-      <div id="thesis" class="content-section">
-        <p class="text-gray-700 mb-4">
-          My PhD thesis focused on the application of deep learning techniques for wavefront sensing in adaptive optics. It presents a novel approach to real-time wavefront reconstruction and improves the performance of adaptive optics systems.
-        </p>
-        <p class="text-gray-700 mb-4">
-          The thesis includes a detailed study of machine learning techniques applied to wavefront sensing, along with experimental validation. It is available for download in PDF format and can also be accessed through INFLIBNET.
-        </p>
-        <a href="assets/Revised_Thesis_Akash.pdf" download class="inline-block text-white bg-[#4B6E57] hover:bg-[#20B2AA] px-6 py-2 rounded-lg text-sm font-medium mb-4">
-          <i class="fas fa-file-pdf mr-2"></i>Download PhD Thesis (PDF)
-        </a>
-        <p class="text-gray-700">
-          Access the full thesis through INFLIBNET: 
-          <a href="https://www.inflibnet.ac.in/" target="_blank" class="text-[#4B6E57] hover:text-[#20B2AA] font-semibold">INFLIBNET</a>
-        </p>
+      <div class="dropdown cursor-pointer">
+        <h2 class="text-2xl font-semibold text-[#4B6E57] border-b-2 border-[#20B2AA] pb-2 mb-4">
+          PhD Thesis
+        </h2>
+        <div class="dropdown-content">
+          <p class="text-gray-700 mb-4">
+            Development of a novel LIBS based Technique for Elemental Analysis and Harnessing Machine Learning for Real time Applications using LIBS and Raman Spectroscopy
+          </p>
+          <a href="assets/Revised_Thesis_Akash.pdf" download class="inline-block text-white bg-[#4B6E57] hover:bg-[#20B2AA] px-6 py-2 rounded-lg text-sm font-medium mb-4">
+            <i class="fas fa-file-pdf mr-2"></i>Download PhD Thesis (PDF)
+          </a>
+          <p class="text-gray-700">
+            Access the full thesis through INFLIBNET: 
+            <a href="http://hdl.handle.net/10603/596075" target="_blank" class="text-[#4B6E57] hover:text-[#20B2AA] font-semibold">INFLIBNET</a>
+          </p>
+        </div>
       </div>
     </section>
 
-    <!-- Peer-reviewed Publications Section -->
+    <!-- Peer-reviewed Publications Section with Dropdown -->
     <section class="mb-12">
-      <h2 class="text-2xl font-semibold text-[#4B6E57] border-b-2 border-[#20B2AA] pb-2 mb-4 cursor-pointer" onclick="toggleSection('peer-reviewed')">
-        Peer-reviewed Publications
-      </h2>
-      <div id="peer-reviewed" class="content-section">
-        <ul class="space-y-4 text-gray-700">
-          <li>
-            <a href="https://doi.org/10.1109/XXX.2024.1234567" target="_blank" class="hover:text-[#20B2AA]">
-              <span class="highlight">Akash Kumar Tarai</span>, et al., "Title of the Peer-reviewed Publication", <i>Journal Name</i>, vol. 12, no. 3, pp. 234-245, 2024. DOI: <span class="font-semibold">10.1109/XXX.2024.1234567</span>
-            </a>
-            <a href="https://doi.org/10.1109/XXX.2024.1234567" target="_blank" class="inline-block text-white bg-[#4B6E57] hover:bg-[#20B2AA] px-4 py-2 rounded-lg text-sm font-medium mt-2">[Link]</a>
-          </li>
-          <li>
-            <a href="https://doi.org/10.1109/YYY.2023.7654321" target="_blank" class="hover:text-[#20B2AA]">
-              <span class="highlight">Akash Kumar Tarai</span>, et al., "Another Title of Peer-reviewed Publication", <i>Another Journal</i>, vol. 11, no. 2, pp. 456-467, 2023. DOI: <span class="font-semibold">10.1109/YYY.2023.7654321</span>
-            </a>
-            <a href="https://doi.org/10.1109/YYY.2023.7654321" target="_blank" class="inline-block text-white bg-[#4B6E57] hover:bg-[#20B2AA] px-4 py-2 rounded-lg text-sm font-medium mt-2">[Link]</a>
-          </li>
-          <li>
-            <a href="https://doi.org/10.1109/ZZZ.2022.5678910" target="_blank" class="hover:text-[#20B2AA]">
-              <span class="highlight">Akash Kumar Tarai</span>, et al., "Yet Another Publication Title", <i>Journal of High-Energy Physics</i>, vol. 15, no. 1, pp. 123-134, 2022. DOI: <span class="font-semibold">10.1109/ZZZ.2022.5678910</span>
-            </a>
-            <a href="https://doi.org/10.1109/ZZZ.2022.5678910" target="_blank" class="inline-block text-white bg-[#4B6E57] hover:bg-[#20B2AA] px-4 py-2 rounded-lg text-sm font-medium mt-2">[Link]</a>
-          </li>
-          <!-- Add more publications here -->
-        </ul>
+      <div class="dropdown cursor-pointer">
+        <h2 class="text-2xl font-semibold text-[#4B6E57] border-b-2 border-[#20B2AA] pb-2 mb-4">
+          Peer-reviewed Publications
+        </h2>
+        <div class="dropdown-content">
+          <ul class="space-y-4 text-gray-700">
+            <li>
+              <a href="https://doi.org/10.1109/XXX.2024.1234567" target="_blank" class="hover:text-[#20B2AA]">
+                <span class="highlight">Akash Kumar Tarai</span>, et al., "Title of the Peer-reviewed Publication", <i>Journal Name</i>, vol. 12, no. 3, pp. 234-245, 2024. DOI: <span class="font-semibold">10.1109/XXX.2024.1234567</span>
+              </a>
+              <a href="https://doi.org/10.1109/XXX.2024.1234567" target="_blank" class="inline-block text-white bg-[#4B6E57] hover:bg-[#20B2AA] px-4 py-2 rounded-lg text-sm font-medium mt-2">[Link]</a>
+            </li>
+            <li>
+              <a href="https://doi.org/10.1109/YYY.2023.7654321" target="_blank" class="hover:text-[#20B2AA]">
+                <span class="highlight">Akash Kumar Tarai</span>, et al., "Another Title of Peer-reviewed Publication", <i>Another Journal</i>, vol. 11, no. 2, pp. 456-467, 2023. DOI: <span class="font-semibold">10.1109/YYY.2023.7654321</span>
+              </a>
+              <a href="https://doi.org/10.1109/YYY.2023.7654321" target="_blank" class="inline-block text-white bg-[#4B6E57] hover:bg-[#20B2AA] px-4 py-2 rounded-lg text-sm font-medium mt-2">[Link]</a>
+            </li>
+            <li>
+              <a href="https://doi.org/10.1109/ZZZ.2022.5678910" target="_blank" class="hover:text-[#20B2AA]">
+                <span class="highlight">Akash Kumar Tarai</span>, et al., "Yet Another Publication Title", <i>Journal of High-Energy Physics</i>, vol. 15, no. 1, pp. 123-134, 2022. DOI: <span class="font-semibold">10.1109/ZZZ.2022.5678910</span>
+              </a>
+              <a href="https://doi.org/10.1109/ZZZ.2022.5678910" target="_blank" class="inline-block text-white bg-[#4B6E57] hover:bg-[#20B2AA] px-4 py-2 rounded-lg text-sm font-medium mt-2">[Link]</a>
+            </li>
+            <!-- Add more publications here -->
+          </ul>
+        </div>
       </div>
     </section>
 
-    <!-- Conference Publications Section -->
+    <!-- Conference Publications Section with Dropdown -->
     <section>
-      <h2 class="text-2xl font-semibold text-[#4B6E57] border-b-2 border-[#20B2AA] pb-2 mb-4 cursor-pointer" onclick="toggleSection('conference')">
-        Conference Publications
-      </h2>
-      <div id="conference" class="content-section">
-        <ul class="space-y-4 text-gray-700">
-          <li>
-            <a href="https://www.example.com" target="_blank" class="hover:text-[#20B2AA]">
-              <span class="highlight">Akash Kumar Tarai</span>, et al., "Conference Paper Title", <i>Conference Name</i>, 2024.
-            </a>
-            <a href="https://www.example.com" target="_blank" class="inline-block text-white bg-[#4B6E57] hover:bg-[#20B2AA] px-4 py-2 rounded-lg text-sm font-medium mt-2">[Link]</a>
-          </li>
-          <li>
-            <a href="https://www.example.com" target="_blank" class="hover:text-[#20B2AA]">
-              <span class="highlight">Akash Kumar Tarai</span>, et al., "Conference Paper Title", <i>Conference Name</i>, 2023.
-            </a>
-            <a href="https://www.example.com" target="_blank" class="inline-block text-white bg-[#4B6E57] hover:bg-[#20B2AA] px-4 py-2 rounded-lg text-sm font-medium mt-2">[Link]</a>
-          </li>
-          <li>
-            <a href="https://www.example.com" target="_blank" class="hover:text-[#20B2AA]">
-              <span class="highlight">Akash Kumar Tarai</span>, et al., "Conference Paper Title", <i>Conference Name</i>, 2022.
-            </a>
-            <a href="https://www.example.com" target="_blank" class="inline-block text-white bg-[#4B6E57] hover:bg-[#20B2AA] px-4 py-2 rounded-lg text-sm font-medium mt-2">[Link]</a>
-          </li>
-          <!-- Add more conference publications here -->
-        </ul>
+      <div class="dropdown cursor-pointer">
+        <h2 class="text-2xl font-semibold text-[#4B6E57] border-b-2 border-[#20B2AA] pb-2 mb-4">
+          Conference Publications
+        </h2>
+        <div class="dropdown-content">
+          <ul class="space-y-4 text-gray-700">
+            <li>
+              <a href="https://www.example.com" target="_blank" class="hover:text-[#20B2AA]">
+                <span class="highlight">Akash Kumar Tarai</span>, et al., "Conference Paper Title", <i>Conference Name</i>, 2024.
+              </a>
+              <a href="https://www.example.com" target="_blank" class="inline-block text-white bg-[#4B6E57] hover:bg-[#20B2AA] px-4 py-2 rounded-lg text-sm font-medium mt-2">[Link]</a>
+            </li>
+            <li>
+              <a href="https://www.example.com" target="_blank" class="hover:text-[#20B2AA]">
+                <span class="highlight">Akash Kumar Tarai</span>, et al., "Conference Paper Title", <i>Conference Name</i>, 2023.
+              </a>
+              <a href="https://www.example.com" target="_blank" class="inline-block text-white bg-[#4B6E57] hover:bg-[#20B2AA] px-4 py-2 rounded-lg text-sm font-medium mt-2">[Link]</a>
+            </li>
+            <li>
+              <a href="https://www.example.com" target="_blank" class="hover:text-[#20B2AA]">
+                <span class="highlight">Akash Kumar Tarai</span>, et al., "Conference Paper Title", <i>Conference Name</i>, 2022.
+              </a>
+              <a href="https://www.example.com" target="_blank" class="inline-block text-white bg-[#4B6E57] hover:bg-[#20B2AA] px-4 py-2 rounded-lg text-sm font-medium mt-2">[Link]</a>
+            </li>
+            <!-- Add more conference publications here -->
+          </ul>
+        </div>
       </div>
     </section>
 
@@ -144,21 +156,6 @@
   <footer class="bg-[#f4f4f4] py-6 text-center text-sm text-[#1A1A1A]">
     © 2025 Akash Kumar Tarai, Postdoctoral Research Fellow, IISER Berhampur, India
   </footer>
-
-  <script>
-    // Mobile menu toggle
-    const menuBtn = document.getElementById('menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    menuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
-
-    // Toggle content visibility
-    function toggleSection(sectionId) {
-      const section = document.getElementById(sectionId);
-      section.classList.toggle('hidden');
-    }
-  </script>
 
 </body>
 </html>
