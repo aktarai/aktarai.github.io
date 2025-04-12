@@ -6,7 +6,6 @@
   <title>Publications | Akash Kumar Tarai</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <style>
     body {
       font-family: 'Inter', sans-serif;
@@ -15,44 +14,14 @@
       color: #4B6E57;
       font-weight: bold;
     }
-    .dropdown-content {
-      display: none;
-      padding: 1rem;
-      background-color: #f4f4f4;
-      border: 1px solid #ddd;
-      margin-top: 0.5rem;
-      border-radius: 0.5rem;
-    }
-    .dropdown-button {
-      cursor: pointer;
-      text-underline-offset: 4px;
-      font-size: 1.25rem;
-      font-weight: bold;
-      color: #4B6E57;
-      padding: 0.5rem;
-      border-bottom: 2px solid #20B2AA;
-    }
   </style>
-  <script>
-    function toggleDropdown(id) {
-      const content = document.getElementById(id);
-      if (content.style.display === "block") {
-        content.style.display = "none";
-      } else {
-        content.style.display = "block";
-      }
-    }
-  </script>
 </head>
 <body class="bg-[#f4f4f4] text-[#1A1A1A]">
 
   <!-- Navigation -->
   <header class="bg-[#4B6E57] shadow sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      <!-- Left Logo or Name -->
       <a href="index.html" class="text-white text-xl font-bold hover:text-[#20B2AA]">Akash Kumar Tarai</a>
-
-      <!-- Desktop Menu -->
       <nav class="hidden md:flex space-x-8 text-lg font-semibold">
         <a href="index.html" class="text-white hover:text-[#20B2AA]">Profile</a>
         <a href="publications.html" class="text-white hover:text-[#20B2AA]">Publications</a>
@@ -61,97 +30,77 @@
         <a href="gallery.html" class="text-white hover:text-[#20B2AA]">Gallery</a>
         <a href="contact.html" class="text-white hover:text-[#20B2AA]">Contact</a>
       </nav>
-
-      <!-- Mobile Menu Button -->
       <button id="menu-btn" class="md:hidden text-white text-2xl focus:outline-none">
         <i class="fas fa-bars"></i>
       </button>
     </div>
   </header>
 
-  <!-- Main Section -->
-  <main class="max-w-7xl mx-auto px-6 py-12">
-    <!-- PhD Thesis Section with Dropdown -->
-    <section class="mb-12">
-      <div>
-        <h2 class="dropdown-button" onclick="toggleDropdown('phd-thesis')">
-          PhD Thesis
-        </h2>
-        <div id="phd-thesis" class="dropdown-content">
-          <p class="text-gray-700 mb-4">
+  <!-- Main Content -->
+  <main class="max-w-5xl mx-auto px-6 py-12">
+
+    <!-- PhD Thesis Section -->
+    <section class="mb-8">
+      <h2 onclick="toggleDropdown(this)" class="text-xl font-semibold text-[#4B6E57] border-b-2 border-[#20B2AA] pb-2 cursor-pointer">
+        PhD Thesis
+      </h2>
+      <div class="mt-4 hidden">
+        <p class="text-gray-700 mb-1">
+          <a href="http://hdl.handle.net/10603/596075" target="_blank" class="hover:text-[#20B2AA]">
             Development of a novel LIBS based Technique for Elemental Analysis and Harnessing Machine Learning for Real time Applications using LIBS and Raman Spectroscopy
-          </p>
-          <a href="assets/Revised_Thesis_Akash.pdf" download class="inline-block text-white bg-[#4B6E57] hover:bg-[#20B2AA] px-6 py-2 rounded-lg text-sm font-medium mb-4">
-            <i class="fas fa-file-pdf mr-2"></i>Download PhD Thesis (PDF)
           </a>
-          <p class="text-gray-700">
-            Access the full thesis through INFLIBNET: 
-            <a href="http://hdl.handle.net/10603/596075" target="_blank" class="text-[#4B6E57] hover:text-[#20B2AA] font-semibold">INFLIBNET</a>
-          </p>
-        </div>
+        </p>
+        <p class="font-bold text-gray-800">Akash Kumar Tarai</p>
+        <p class="text-gray-600">University of Hyderabad, India</p>
       </div>
     </section>
 
-    <!-- Peer-reviewed Publications Section with Dropdown -->
-    <section class="mb-12">
-      <div>
-        <h2 class="dropdown-button" onclick="toggleDropdown('peer-reviewed-publications')">
-          Peer-reviewed Publications
-        </h2>
-        <div id="peer-reviewed-publications" class="dropdown-content">
-          <ul class="space-y-4 text-gray-700">
-            <li>
-              <a href="https://doi.org/10.1109/XXX.2024.1234567" target="_blank" class="hover:text-[#20B2AA]">
-                <span class="highlight">Akash Kumar Tarai</span>, et al., "Title of the Peer-reviewed Publication", <i>Journal Name</i>, vol. 12, no. 3, pp. 234-245, 2024. DOI: <span class="font-semibold">10.1109/XXX.2024.1234567</span>
-              </a>
-              <a href="https://doi.org/10.1109/XXX.2024.1234567" target="_blank" class="inline-block text-white bg-[#4B6E57] hover:bg-[#20B2AA] px-4 py-2 rounded-lg text-sm font-medium mt-2">[Link]</a>
-            </li>
-            <li>
-              <a href="https://doi.org/10.1109/YYY.2023.7654321" target="_blank" class="hover:text-[#20B2AA]">
-                <span class="highlight">Akash Kumar Tarai</span>, et al., "Another Title of Peer-reviewed Publication", <i>Another Journal</i>, vol. 11, no. 2, pp. 456-467, 2023. DOI: <span class="font-semibold">10.1109/YYY.2023.7654321</span>
-              </a>
-              <a href="https://doi.org/10.1109/YYY.2023.7654321" target="_blank" class="inline-block text-white bg-[#4B6E57] hover:bg-[#20B2AA] px-4 py-2 rounded-lg text-sm font-medium mt-2">[Link]</a>
-            </li>
-            <li>
-              <a href="https://doi.org/10.1109/ZZZ.2022.5678910" target="_blank" class="hover:text-[#20B2AA]">
-                <span class="highlight">Akash Kumar Tarai</span>, et al., "Yet Another Publication Title", <i>Journal of High-Energy Physics</i>, vol. 15, no. 1, pp. 123-134, 2022. DOI: <span class="font-semibold">10.1109/ZZZ.2022.5678910</span>
-              </a>
-              <a href="https://doi.org/10.1109/ZZZ.2022.5678910" target="_blank" class="inline-block text-white bg-[#4B6E57] hover:bg-[#20B2AA] px-4 py-2 rounded-lg text-sm font-medium mt-2">[Link]</a>
-            </li>
-          </ul>
-        </div>
-      </div>
+    <!-- Peer-reviewed Publications Section -->
+    <section class="mb-8">
+      <h2 onclick="toggleDropdown(this)" class="text-xl font-semibold text-[#4B6E57] border-b-2 border-[#20B2AA] pb-2 cursor-pointer">
+        Peer-reviewed Publications
+      </h2>
+      <ol class="list-decimal list-inside mt-4 space-y-4 hidden">
+        <li>
+          <a href="https://doi.org/10.1109/XXX.2024.1234567" target="_blank" class="hover:text-[#20B2AA] block">
+            D. Sharma, <span class="highlight">Akash Kumar Tarai</span>, M. R. Naik, G. Manoj Kumar, "Title of the Peer-reviewed Publication", <i>Journal Name</i>, vol. 12, no. 3, pp. 234-245, 2024.
+          </a>
+        </li>
+        <li>
+          <a href="https://doi.org/10.1109/YYY.2023.7654321" target="_blank" class="hover:text-[#20B2AA] block">
+            M. R. Naik, G. Manoj Kumar, <span class="highlight">Akash Kumar Tarai</span>, D. Sharma, "Another Title of Peer-reviewed Publication", <i>Another Journal</i>, vol. 11, no. 2, pp. 456-467, 2023.
+          </a>
+        </li>
+        <li>
+          <a href="https://doi.org/10.1109/ZZZ.2022.5678910" target="_blank" class="hover:text-[#20B2AA] block">
+            G. Manoj Kumar, D. Sharma, <span class="highlight">Akash Kumar Tarai</span>, M. R. Naik, "Yet Another Publication Title", <i>Journal of High-Energy Physics</i>, vol. 15, no. 1, pp. 123-134, 2022.
+          </a>
+        </li>
+      </ol>
     </section>
 
-    <!-- Conference Publications Section with Dropdown -->
-    <section>
-      <div>
-        <h2 class="dropdown-button" onclick="toggleDropdown('conference-publications')">
-          Conference Publications
-        </h2>
-        <div id="conference-publications" class="dropdown-content">
-          <ul class="space-y-4 text-gray-700">
-            <li>
-              <a href="https://www.example.com" target="_blank" class="hover:text-[#20B2AA]">
-                <span class="highlight">Akash Kumar Tarai</span>, et al., "Conference Paper Title", <i>Conference Name</i>, 2024.
-              </a>
-              <a href="https://www.example.com" target="_blank" class="inline-block text-white bg-[#4B6E57] hover:bg-[#20B2AA] px-4 py-2 rounded-lg text-sm font-medium mt-2">[Link]</a>
-            </li>
-            <li>
-              <a href="https://www.example.com" target="_blank" class="hover:text-[#20B2AA]">
-                <span class="highlight">Akash Kumar Tarai</span>, et al., "Conference Paper Title", <i>Conference Name</i>, 2023.
-              </a>
-              <a href="https://www.example.com" target="_blank" class="inline-block text-white bg-[#4B6E57] hover:bg-[#20B2AA] px-4 py-2 rounded-lg text-sm font-medium mt-2">[Link]</a>
-            </li>
-            <li>
-              <a href="https://www.example.com" target="_blank" class="hover:text-[#20B2AA]">
-                <span class="highlight">Akash Kumar Tarai</span>, et al., "Conference Paper Title", <i>Conference Name</i>, 2022.
-              </a>
-              <a href="https://www.example.com" target="_blank" class="inline-block text-white bg-[#4B6E57] hover:bg-[#20B2AA] px-4 py-2 rounded-lg text-sm font-medium mt-2">[Link]</a>
-            </li>
-          </ul>
-        </div>
-      </div>
+    <!-- Conference Publications Section -->
+    <section class="mb-8">
+      <h2 onclick="toggleDropdown(this)" class="text-xl font-semibold text-[#4B6E57] border-b-2 border-[#20B2AA] pb-2 cursor-pointer">
+        Conference Publications
+      </h2>
+      <ol class="list-decimal list-inside mt-4 space-y-4 hidden">
+        <li>
+          <a href="https://www.example.com" target="_blank" class="hover:text-[#20B2AA] block">
+            <span class="highlight">Akash Kumar Tarai</span>, M. R. Naik, "Laser-Induced Breakdown Spectroscopy Applications in Real-Time", <i>International Conference on Advanced Spectroscopy</i>, 2024.
+          </a>
+        </li>
+        <li>
+          <a href="https://www.example.com" target="_blank" class="hover:text-[#20B2AA] block">
+            M. R. Naik, <span class="highlight">Akash Kumar Tarai</span>, "LIBS for Material Analysis", <i>Photonics India 2023</i>, 2023.
+          </a>
+        </li>
+        <li>
+          <a href="https://www.example.com" target="_blank" class="hover:text-[#20B2AA] block">
+            <span class="highlight">Akash Kumar Tarai</span>, G. Manoj Kumar, "Raman Spectroscopy and Deep Learning", <i>Optics India</i>, 2022.
+          </a>
+        </li>
+      </ol>
     </section>
 
   </main>
@@ -160,6 +109,14 @@
   <footer class="bg-[#f4f4f4] py-6 text-center text-sm text-[#1A1A1A]">
     © 2025 Akash Kumar Tarai, Postdoctoral Research Fellow, IISER Berhampur, India
   </footer>
+
+  <!-- Toggle Function Script -->
+  <script>
+    function toggleDropdown(element) {
+      const content = element.nextElementSibling;
+      content.classList.toggle('hidden');
+    }
+  </script>
 
 </body>
 </html>
