@@ -27,7 +27,7 @@
       padding-left: 1.8rem;
       text-align: justify;
       font-size: 1rem;
-      color: #f4f4f4;
+      color: #D6D3D1;
     }
     ol.custom-list li::before {
       content: counter(item) ".";
@@ -43,30 +43,40 @@
     }
     .content-block {
       font-size: 1rem;
-      color: #f4f4f4;
+      color: #D6D3D1;
       padding-left: 1.5rem;
       padding-right: 1.5rem;
       text-align: justify;
     }
   </style>
 </head>
-<body class="bg-[#1A1A1A] text-[#f4f4f4]">
+<body class="bg-[#1A1A1A] text-[#D6D3D1]">
 
   <!-- Navigation -->
-  <header class="bg-[#0f0f0f] shadow sticky top-0 z-50">
+  <header class="bg-[#4B6E57] shadow sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      <a href="index.html" class="text-[#f4f4f4] text-xl font-bold hover:text-[#FFD700]">Akash Kumar Tarai</a>
+      <a href="index.html" class="text-white text-xl font-bold hover:text-[#FFD700]">Akash Kumar Tarai</a>
       <nav class="hidden md:flex space-x-8 text-lg font-semibold">
-        <a href="index.html" class="text-[#f4f4f4] hover:text-[#FFD700]">Profile</a>
-        <a href="publications.html" class="text-[#f4f4f4] hover:text-[#FFD700]">Publications</a>
-        <a href="awards.html" class="text-[#f4f4f4] hover:text-[#FFD700]">Awards & Grants</a>
-        <a href="conferences.html" class="text-[#f4f4f4] hover:text-[#FFD700]">Conferences & Workshops</a>
-        <a href="gallery.html" class="text-[#f4f4f4] hover:text-[#FFD700]">Gallery</a>
-        <a href="contact.html" class="text-[#f4f4f4] hover:text-[#FFD700]">Contact</a>
+        <a href="index.html" class="text-white hover:text-[#FFD700]">Profile</a>
+        <a href="publications.html" class="text-white hover:text-[#FFD700]">Publications</a>
+        <a href="awards.html" class="text-white hover:text-[#FFD700]">Awards & Grants</a>
+        <a href="conferences.html" class="text-white hover:text-[#FFD700]">Conferences & Workshops</a>
+        <a href="gallery.html" class="text-white hover:text-[#FFD700]">Gallery</a>
+        <a href="contact.html" class="text-white hover:text-[#FFD700]">Contact</a>
       </nav>
-      <button id="menu-btn" class="md:hidden text-[#f4f4f4] text-2xl focus:outline-none">
+      <button id="menu-btn" class="md:hidden text-white text-2xl focus:outline-none">
         <i class="fas fa-bars"></i>
       </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden bg-[#4B6E57] px-6 pb-4 space-y-2 text-lg font-semibold">
+      <a href="index.html" class="block text-white hover:text-[#FFD700]">Profile</a>
+      <a href="publications.html" class="block text-white hover:text-[#FFD700]">Publications</a>
+      <a href="awards.html" class="block text-white hover:text-[#FFD700]">Awards & Grants</a>
+      <a href="conferences.html" class="block text-white hover:text-[#FFD700]">Conferences & Workshops</a>
+      <a href="gallery.html" class="block text-white hover:text-[#FFD700]">Gallery</a>
+      <a href="contact.html" class="block text-white hover:text-[#FFD700]">Contact</a>
     </div>
   </header>
 
@@ -75,7 +85,7 @@
 
     <!-- Awards Section -->
     <section>
-      <h2 class="text-xl font-semibold text-[#FFD700] border-b-2 border-[#FFD700] pb-2">
+      <h2 class="text-xl font-semibold text-[#FFD700] border-b-2 border-[#4B6E57] pb-2">
         Awards
       </h2>
       <div class="mt-4 content-block">
@@ -95,7 +105,7 @@
 
     <!-- Grants Section -->
     <section>
-      <h2 class="text-xl font-semibold text-[#FFD700] border-b-2 border-[#FFD700] pb-2">
+      <h2 class="text-xl font-semibold text-[#FFD700] border-b-2 border-[#4B6E57] pb-2">
         Grants
       </h2>
       <div class="mt-4 content-block">
@@ -113,16 +123,16 @@
   </main>
 
   <!-- Footer -->
-  <footer class="bg-[#1A1A1A] py-6 text-center text-sm text-[#f4f4f4]">
+  <footer class="bg-[#1A1A1A] py-6 text-center text-sm text-[#D6D3D1] border-t border-[#4B6E57]">
     © 2025 Akash Kumar Tarai, Postdoctoral Research Fellow, IISER Berhampur, India
   </footer>
 
   <!-- Script -->
   <script>
     const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
     menuBtn.addEventListener('click', () => {
-      const nav = document.querySelector('nav');
-      nav.classList.toggle('hidden');
+      mobileMenu.classList.toggle('hidden');
     });
   </script>
 
