@@ -6,12 +6,13 @@
   <title>Awards & Grants | Akash Kumar Tarai</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
     body {
       font-family: 'Inter', sans-serif;
     }
     .highlight {
-      color: #4B6E57;
+      color: #FFD700;
       font-weight: bold;
     }
     ol.custom-list {
@@ -26,14 +27,14 @@
       padding-left: 1.8rem;
       text-align: justify;
       font-size: 1rem;
-      color: #1A1A1A;
+      color: #f4f4f4;
     }
     ol.custom-list li::before {
       content: counter(item) ".";
       position: absolute;
       left: 0;
       top: 0;
-      color: #1A1A1A;
+      color: #FFD700;
       font-weight: normal;
     }
     ol.custom-list.reverse {
@@ -42,27 +43,30 @@
     }
     .content-block {
       font-size: 1rem;
-      color: #1A1A1A;
+      color: #f4f4f4;
       padding-left: 1.5rem;
       padding-right: 1.5rem;
       text-align: justify;
     }
   </style>
 </head>
-<body class="bg-[#f4f4f4] text-[#1A1A1A]">
+<body class="bg-[#1A1A1A] text-[#f4f4f4]">
 
   <!-- Navigation -->
-  <header class="bg-[#4B6E57] shadow sticky top-0 z-50">
+  <header class="bg-[#0f0f0f] shadow sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      <a href="index.html" class="text-white text-xl font-bold hover:text-[#20B2AA]">Akash Kumar Tarai</a>
+      <a href="index.html" class="text-[#f4f4f4] text-xl font-bold hover:text-[#FFD700]">Akash Kumar Tarai</a>
       <nav class="hidden md:flex space-x-8 text-lg font-semibold">
-        <a href="index.html" class="text-white hover:text-[#20B2AA]">Profile</a>
-        <a href="publications.html" class="text-white hover:text-[#20B2AA]">Publications</a>
-        <a href="awards.html" class="text-white hover:text-[#20B2AA]">Awards & Grants</a>
-        <a href="conferences.html" class="text-white hover:text-[#20B2AA]">Conferences & Workshops</a>
-        <a href="gallery.html" class="text-white hover:text-[#20B2AA]">Gallery</a>
-        <a href="contact.html" class="text-white hover:text-[#20B2AA]">Contact</a>
+        <a href="index.html" class="text-[#f4f4f4] hover:text-[#FFD700]">Profile</a>
+        <a href="publications.html" class="text-[#f4f4f4] hover:text-[#FFD700]">Publications</a>
+        <a href="awards.html" class="text-[#f4f4f4] hover:text-[#FFD700]">Awards & Grants</a>
+        <a href="conferences.html" class="text-[#f4f4f4] hover:text-[#FFD700]">Conferences & Workshops</a>
+        <a href="gallery.html" class="text-[#f4f4f4] hover:text-[#FFD700]">Gallery</a>
+        <a href="contact.html" class="text-[#f4f4f4] hover:text-[#FFD700]">Contact</a>
       </nav>
+      <button id="menu-btn" class="md:hidden text-[#f4f4f4] text-2xl focus:outline-none">
+        <i class="fas fa-bars"></i>
+      </button>
     </div>
   </header>
 
@@ -71,19 +75,19 @@
 
     <!-- Awards Section -->
     <section>
-      <h2 class="text-xl font-semibold text-[#4B6E57] border-b-2 border-[#20B2AA] pb-2">
+      <h2 class="text-xl font-semibold text-[#FFD700] border-b-2 border-[#FFD700] pb-2">
         Awards
       </h2>
       <div class="mt-4 content-block">
         <ol class="custom-list reverse">
           <li>
-            <span class="highlight">Akash Kumar Tarai</span>, <span class="highlight">Best Poster Award</span>, <i>Frontiers in Physics (FIP2023)</i>, University of Hyderabad, India, 2023.
+            <p><span class="highlight">Best Poster Award</span>, <i>Frontiers in Physics (FIP2023)</i>, University of Hyderabad, India, 2023.</p>
           </li>
           <li>
-            <span class="highlight">Akash Kumar Tarai</span>, <span class="highlight">Future Research Talent (FRT) Award</span>, <i>Australian National University</i>, Australia, 2024.
+            <p><span class="highlight">Future Research Talent (FRT) Award</span>, <i>Australian National University</i>, Australia, 2024.</p>
           </li>
           <li>
-            <span class="highlight">Akash Kumar Tarai</span>, <span class="highlight">Best Thesis Award</span>, <i>National Photonics Symposium (NPS2025)</i>, Cochin University of Science and Technology (CUSAT), India, 2025.
+            <p><span class="highlight">Best Thesis Award</span>, <i>National Photonics Symposium (NPS2025)</i>, Cochin University of Science and Technology (CUSAT), India, 2025.</p>
           </li>
         </ol>
       </div>
@@ -91,16 +95,16 @@
 
     <!-- Grants Section -->
     <section>
-      <h2 class="text-xl font-semibold text-[#4B6E57] border-b-2 border-[#20B2AA] pb-2">
+      <h2 class="text-xl font-semibold text-[#FFD700] border-b-2 border-[#FFD700] pb-2">
         Grants
       </h2>
       <div class="mt-4 content-block">
         <ol class="custom-list reverse">
           <li>
-            <span class="highlight">Akash Kumar Tarai</span>, <span class="highlight">International Travel Grant</span>, <i>Institute of Eminence (IoE), University of Hyderabad</i>. Received to attend and present research at the "XII Laser Induced Breakdown Spectroscopy (LIBS 2022)" conference held at Bari, Italy, 2022.
+            <p><span class="highlight">International Travel Grant</span>, <i>Institute of Eminence (IoE), University of Hyderabad</i>. Received to attend and present research at "XII Laser Induced Breakdown Spectroscopy (LIBS 2022)" conference held at Bari, Italy, 2022.</p>
           </li>
           <li>
-            <span class="highlight">Akash Kumar Tarai</span>, <span class="highlight">International Travel Grant</span>, <i>Science and Engineering Research Board (SERB), Government of India</i>. Sanctioned to attend and present research at the "12th Euro-Mediterranean Symposium on Laser-induced Breakdown Spectroscopy (EMS LIBS 2023)" held at Porto, Portugal, 2023.
+            <p><span class="highlight">International Travel Grant</span>, <i>Science and Engineering Research Board (SERB), Government of India</i>. Sanctioned to attend and present research at "12th Euro-Mediterranean Symposium on Laser-induced Breakdown Spectroscopy (EMS LIBS 2023)" held at Porto, Portugal, 2023.</p>
           </li>
         </ol>
       </div>
@@ -109,9 +113,18 @@
   </main>
 
   <!-- Footer -->
-  <footer class="bg-[#f4f4f4] py-6 text-center text-sm text-[#1A1A1A]">
+  <footer class="bg-[#1A1A1A] py-6 text-center text-sm text-[#f4f4f4]">
     © 2025 Akash Kumar Tarai, Postdoctoral Research Fellow, IISER Berhampur, India
   </footer>
+
+  <!-- Script -->
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    menuBtn.addEventListener('click', () => {
+      const nav = document.querySelector('nav');
+      nav.classList.toggle('hidden');
+    });
+  </script>
 
 </body>
 </html>
