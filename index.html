@@ -12,7 +12,6 @@
       font-family: 'Inter', sans-serif;
     }
 
-    /* Left side freeze on scroll for web version */
     @media (min-width: 768px) {
       .sticky-left {
         position: sticky;
@@ -21,18 +20,15 @@
       }
     }
 
-    /* Make sure the right side scrolls */
     .main-content {
       overflow-y: auto;
       max-height: calc(100vh - 60px);
     }
 
-    /* Justified text for biography section */
     .bio-text {
       text-align: justify;
     }
 
-    /* Golden underline stretched across the page */
     .underline-long {
       border-bottom: 3px solid #FFB800;
       width: 100%;
@@ -45,7 +41,7 @@
   <header class="bg-[#2E3A59] shadow sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
       <!-- Left Logo or Name -->
-      <a href="index.html" class="text-white text-lg font-semibold hover:text-[#FFB800]">Akash Kumar Tarai</a>
+      <a href="index.html" class="text-white text-xl font-semibold hover:text-[#FFB800]">Akash Kumar Tarai</a>
 
       <!-- Desktop Menu -->
       <nav class="hidden md:flex space-x-8 text-lg font-medium">
@@ -190,7 +186,6 @@
   </footer>
 
   <script>
-    // Mobile menu toggle
     const menuBtn = document.getElementById('menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
     menuBtn.addEventListener('click', () => {
