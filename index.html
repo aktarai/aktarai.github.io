@@ -12,6 +12,7 @@
       font-family: 'Inter', sans-serif;
     }
 
+    /* Left side freeze on scroll for web version */
     @media (min-width: 768px) {
       .sticky-left {
         position: sticky;
@@ -20,15 +21,18 @@
       }
     }
 
+    /* Make sure the right side scrolls */
     .main-content {
       overflow-y: auto;
       max-height: calc(100vh - 60px);
     }
 
+    /* Justified text for biography section */
     .bio-text {
       text-align: justify;
     }
 
+    /* Golden underline stretched across the page */
     .underline-long {
       border-bottom: 3px solid #FFB800;
       width: 100%;
@@ -41,7 +45,7 @@
   <header class="bg-[#2E3A59] shadow sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
       <!-- Left Logo or Name -->
-      <a href="index.html" class="text-white text-xl font-semibold hover:text-[#FFB800]">Akash Kumar Tarai</a>
+      <a href="index.html" class="text-white text-lg font-semibold hover:text-[#FFB800]">Akash Kumar Tarai</a>
 
       <!-- Desktop Menu -->
       <nav class="hidden md:flex space-x-8 text-lg font-medium">
@@ -81,16 +85,16 @@
       <div class="text-[#4B5563] text-base mb-4">IISER Berhampur, India</div>
 
       <!-- Email Links -->
-      <p class="text-sm text-[#4B6E57] hover:text-[#FFB800]">
+      <p class="text-sm text-[#B6862C] hover:text-[#FF6A00]">
         <a href="mailto:akashktarai@gmail.com">akashktarai@gmail.com</a>
       </p>
-      <p class="text-sm text-[#4B6E57] hover:text-[#FFB800] mb-4">
+      <p class="text-sm text-[#B6862C] hover:text-[#FF6A00] mb-4">
         <a href="mailto:akasht@iiserbpr.ac.in">akasht@iiserbpr.ac.in</a>
       </p>
 
       <!-- Download CV Button -->
       <a href="assets/CV.pdf" download class="mt-4 inline-block px-5 py-2 bg-[#2E3A59] text-white text-sm font-medium rounded-lg hover:bg-[#FF6A00] shadow">
-        <i class="fas fa-file-pdf mr-2"></i>Download CV
+        <i class="fas fa-file-alt mr-2"></i>Download CV
       </a>
 
       <!-- Social Icons -->
@@ -186,6 +190,7 @@
   </footer>
 
   <script>
+    // Mobile menu toggle
     const menuBtn = document.getElementById('menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
     menuBtn.addEventListener('click', () => {
