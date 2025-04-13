@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Akash Kumar Tarai</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <style>
     body {
-      font-family: 'Source Sans Pro', sans-serif;
+      font-family: 'Inter', sans-serif;
     }
 
     @media (min-width: 768px) {
@@ -30,13 +30,15 @@
     }
   </style>
 </head>
-<body class="bg-gray-100 text-gray-900">
+<body class="bg-stone-50 text-neutral-900">
 
   <!-- Navigation -->
-  <header class="bg-[#1F2937] shadow sticky top-0 z-50">
+  <header class="bg-blue-900 shadow sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      <a href="index.html" class="text-white text-xl font-semibold hover:text-blue-400">Akash Kumar Tarai</a>
-      <nav class="hidden md:flex space-x-8 text-md font-medium">
+      <a href="index.html" class="text-white text-2xl font-bold hover:text-blue-400">Akash Kumar Tarai</a>
+
+      <!-- Desktop Menu -->
+      <nav class="hidden md:flex space-x-8 text-lg font-semibold">
         <a href="index.html" class="text-white hover:text-blue-400">Profile</a>
         <a href="publications.html" class="text-white hover:text-blue-400">Publications</a>
         <a href="awards.html" class="text-white hover:text-blue-400">Awards & Grants</a>
@@ -44,10 +46,14 @@
         <a href="gallery.html" class="text-white hover:text-blue-400">Gallery</a>
         <a href="contact.html" class="text-white hover:text-blue-400">Contact</a>
       </nav>
+
+      <!-- Mobile Menu Button -->
       <button id="menu-btn" class="md:hidden text-white text-2xl focus:outline-none">
         <i class="fas fa-bars"></i>
       </button>
     </div>
+
+    <!-- Mobile Menu Dropdown -->
     <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 space-y-2 text-white text-base font-medium">
       <a href="index.html" class="block hover:text-blue-400">Profile</a>
       <a href="publications.html" class="block hover:text-blue-400">Publications</a>
@@ -58,58 +64,56 @@
     </div>
   </header>
 
-  <!-- Main -->
+  <!-- Main Section -->
   <main class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-12">
-    <!-- Left: Profile -->
+
+    <!-- Left: Photo and Contact -->
     <aside class="col-span-1 flex flex-col items-center text-center sticky-left">
-      <img src="assets/my_photo.jpeg" alt="Akash Kumar Tarai" class="w-72 h-72 rounded-xl object-cover shadow-lg border-4 border-white mb-6">
-      <div class="text-2xl font-semibold mb-1">Akash Kumar Tarai</div>
+      <img src="assets/my_photo.jpeg" alt="Your Photo" class="w-72 h-72 rounded-xl object-cover shadow-xl border-4 border-white mb-6">
+      <div class="text-2xl font-bold mb-1">Akash Kumar Tarai</div>
       <div class="text-gray-600 text-base">Postdoctoral Research Fellow</div>
       <div class="text-gray-600 text-base mb-4">IISER Berhampur, India</div>
 
-      <!-- Highlighted Emails -->
-      <div class="space-y-2 mb-4">
-        <a href="mailto:akashktarai@gmail.com" class="block bg-white px-3 py-1 text-sm rounded-md border border-blue-200 text-[#1F2937] hover:text-blue-600 hover:bg-blue-50 transition">
-          akashktarai@gmail.com
-        </a>
-        <a href="mailto:akasht@iiserbpr.ac.in" class="block bg-white px-3 py-1 text-sm rounded-md border border-blue-200 text-[#1F2937] hover:text-blue-600 hover:bg-blue-50 transition">
-          akasht@iiserbpr.ac.in
-        </a>
-      </div>
+      <p class="text-base text-blue-800 font-medium hover:underline hover:text-blue-600">
+        <a href="mailto:akashktarai@gmail.com">akashktarai@gmail.com</a>
+      </p>
+      <p class="text-base text-blue-800 font-medium hover:underline hover:text-blue-600 mb-4">
+        <a href="mailto:akasht@iiserbpr.ac.in">akasht@iiserbpr.ac.in</a>
+      </p>
 
-      <a href="assets/CV.pdf" download class="mt-4 inline-block px-5 py-2 bg-[#1F2937] text-white text-sm rounded-lg hover:bg-blue-600 shadow">
+      <a href="assets/CV.pdf" download class="mt-4 inline-block px-5 py-2 bg-blue-900 text-white text-sm font-medium rounded-lg hover:bg-blue-700 shadow">
         <i class="fas fa-file-pdf mr-2"></i>Download CV
       </a>
 
-      <div class="flex justify-center space-x-6 text-[2rem] text-[#1F2937] mt-6">
-        <a href="https://scholar.google.com/citations?user=3q74S1kAAAAJ" target="_blank" title="Google Scholar" class="hover:text-blue-500">
+      <div class="flex justify-center space-x-6 text-[2.2rem] text-blue-900 mt-6">
+        <a href="https://scholar.google.co.in/citations?user=3q74S1kAAAAJ&hl=en&oi=ao" target="_blank" title="Google Scholar" class="hover:text-blue-600">
           <i class="fas fa-graduation-cap"></i>
         </a>
-        <a href="https://www.researchgate.net/profile/Akash-Tarai?ev=hdr_xprf" target="_blank" title="ResearchGate" class="hover:text-blue-500">
+        <a href="https://www.researchgate.net/profile/Akash-Tarai?ev=hdr_xprf" target="_blank" title="ResearchGate" class="hover:text-blue-600">
           <i class="fab fa-researchgate"></i>
         </a>
-        <a href="https://www.linkedin.com/in/akash-kumar-tarai-phd-74129b225/" target="_blank" title="LinkedIn" class="hover:text-blue-500">
+        <a href="https://www.linkedin.com/in/akash-kumar-tarai-phd-74129b225/" target="_blank" title="LinkedIn" class="hover:text-blue-600">
           <i class="fab fa-linkedin"></i>
         </a>
       </div>
     </aside>
 
-    <!-- Right: Main content -->
+    <!-- Right: Bio and Sections -->
     <section class="col-span-2 space-y-10 main-content">
-      <!-- Bio -->
+      <!-- Biography -->
       <div>
-        <h2 class="text-xl font-semibold border-b-2 border-blue-500 pb-1 mb-3">Brief Biography</h2>
+        <h2 class="text-xl font-semibold border-b-2 border-blue-600 pb-1 mb-3">Biography</h2>
         <p class="text-gray-800 bio-text leading-relaxed">
-          I am a Postdoctoral Research Fellow in the Department of Physical Sciences at IISER Berhampur, India, working on wavefront sensing using deep learning for adaptive optics applications. I obtained my PhD in Physics from the Advanced Centre of Research in High Energy Materials (ACRHEM), University of Hyderabad, India in 2024.
+          I am a Postdoctoral Research Fellow in the Department of Physical Sciences at Indian Institute of Science Education and Research (IISER), Berhampur, India, working on wavefront sensing using deep learning for adaptive optics applications. I obtained my PhD in Physics from the Advanced Centre of Research in High Energy Materials (ACRHEM), School of Physics, University of Hyderabad, India in 2024.
         </p>
-        <p class="text-gray-800 bio-text leading-relaxed mt-2">
-          My research interests include Laser Produced Plasma Diagnostics, Laser-Induced Breakdown Spectroscopy (LIBS), Raman Spectroscopy, and the application of Machine Learning in Laser Spectroscopy and Adaptive Optics.
+        <p class="text-gray-800 bio-text leading-relaxed">
+          My research interests are Laser Produced Plasma Diagnostics, Laser-Induced Breakdown Spectroscopy (LIBS), Raman Spectroscopy, and application of Machine Learning and Deep Learning in Laser Spectroscopy and Adaptive Optics.
         </p>
       </div>
 
-      <!-- Research Interests -->
+      <!-- Research Areas -->
       <div>
-        <h2 class="text-xl font-semibold border-b-2 border-blue-500 pb-1 mb-3">Research Areas & Interests</h2>
+        <h2 class="text-xl font-semibold border-b-2 border-blue-600 pb-1 mb-3">Research Areas & Interests</h2>
         <ul class="list-disc list-inside text-gray-800 space-y-1">
           <li>Laser Produced Plasma</li>
           <li>Laser Induced Breakdown Spectroscopy (LIBS)</li>
@@ -119,11 +123,11 @@
         </ul>
       </div>
 
-      <!-- Experience -->
+      <!-- Professional Experience -->
       <div>
-        <h2 class="text-xl font-semibold border-b-2 border-blue-500 pb-1 mb-3">Professional Experience</h2>
+        <h2 class="text-xl font-semibold border-b-2 border-blue-600 pb-1 mb-3">Professional Experience</h2>
         <div class="text-base text-gray-800 space-y-6">
-          <div class="border-l-4 border-[#1F2937] pl-4">
+          <div class="border-l-4 border-blue-800 pl-4">
             <div class="flex justify-between items-center">
               <span class="font-semibold">Postdoctoral Research Fellow</span>
               <span class="text-sm text-gray-500">Dec 2024 – Present</span>
@@ -136,25 +140,25 @@
 
       <!-- Education -->
       <div>
-        <h2 class="text-xl font-semibold border-b-2 border-blue-500 pb-1 mb-3">Education</h2>
+        <h2 class="text-xl font-semibold border-b-2 border-blue-600 pb-1 mb-3">Education</h2>
         <div class="text-base text-gray-800 space-y-4">
-          <div class="border-l-4 border-[#1F2937] pl-4">
+          <div class="border-l-4 border-blue-800 pl-4">
             <div class="flex justify-between items-center">
               <span class="font-semibold">Ph.D. in Physics</span>
               <span class="text-sm text-gray-500">2024</span>
             </div>
             <span class="text-gray-700">University of Hyderabad, India</span><br>
             <span class="text-gray-600">Mentor: Prof. Manoj Kumar Gundawar</span><br>
-            <a href="assets/Revised_Thesis_Akash.pdf" target="_blank" class="text-blue-600 hover:underline text-sm">View Thesis</a>
+            <a href="assets/Revised_Thesis_Akash.pdf" target="_blank" class="text-blue-700 hover:text-blue-600 underline text-sm">View Thesis</a>
           </div>
-          <div class="border-l-4 border-[#1F2937] pl-4">
+          <div class="border-l-4 border-blue-800 pl-4">
             <div class="flex justify-between items-center">
               <span class="font-semibold">M.Sc. in Physics</span>
               <span class="text-sm text-gray-500">2017</span>
             </div>
             <span class="text-gray-700">Pondicherry University, India</span>
           </div>
-          <div class="border-l-4 border-[#1F2937] pl-4">
+          <div class="border-l-4 border-blue-800 pl-4">
             <div class="flex justify-between items-center">
               <span class="font-semibold">B.Sc. in Physics</span>
               <span class="text-sm text-gray-500">2015</span>
@@ -167,12 +171,11 @@
   </main>
 
   <!-- Footer -->
-  <footer class="bg-gray-200 py-6 text-center text-sm text-gray-600">
-    © 2025 Akash Kumar Tarai · Postdoctoral Research Fellow · IISER Berhampur
+  <footer class="bg-stone-50 py-6 text-center text-sm text-neutral-700">
+    © 2025 Akash Kumar Tarai, Postdoctoral Research Fellow, IISER Berhampur, India
   </footer>
 
   <script>
-    // Mobile menu toggle
     const menuBtn = document.getElementById('menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
     menuBtn.addEventListener('click', () => {
