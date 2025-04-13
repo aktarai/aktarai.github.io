@@ -8,11 +8,11 @@
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <!-- Font Awesome (latest version - working) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-ozD7iZyZTtoOR9qhzDnVquKYVNLAswK7VPnQMBWcEtWoVKu7HdAgAzwnP48aObTjP+pjCRYmSGABEd7C2RFK2w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-ZM+HdScKuwr+NNgZxugE1EyKy+K2I4uqRZr6eW6LOaU8FtSlKq3zTDLbXjvxOVh7ahVRpM+R1K0mZy8zU1y+2w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 
   <style>
     body {
@@ -20,81 +20,65 @@
     }
   </style>
 </head>
-<body class="bg-[#f4f4f4] text-[#1A1A1A]">
+<body class="bg-gray-50 text-gray-900">
 
-  <!-- Navigation -->
-  <header class="bg-[#4B6E57] shadow sticky top-0 z-50">
+  <!-- Header -->
+  <header class="bg-green-800 shadow sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      <a href="index.html" class="text-white text-xl font-bold hover:text-[#20B2AA]">Akash Kumar Tarai</a>
-      <nav class="hidden md:flex space-x-8 text-lg font-semibold">
-        <a href="index.html" class="text-white hover:text-[#20B2AA]">Profile</a>
-        <a href="publications.html" class="text-white hover:text-[#20B2AA]">Publications</a>
-        <a href="awards.html" class="text-white hover:text-[#20B2AA]">Awards & Grants</a>
-        <a href="conferences.html" class="text-white hover:text-[#20B2AA]">Conferences & Workshops</a>
-        <a href="gallery.html" class="text-white hover:text-[#20B2AA]">Gallery</a>
-        <a href="contact.html" class="text-white hover:text-[#20B2AA]">Contact</a>
+      <a href="#" class="text-white text-xl font-bold">Akash Kumar Tarai</a>
+      <nav class="hidden md:flex space-x-8 text-white font-semibold">
+        <a href="#" class="hover:text-teal-300">Profile</a>
+        <a href="#" class="hover:text-teal-300">Publications</a>
+        <a href="#" class="hover:text-teal-300">Awards</a>
+        <a href="#" class="hover:text-teal-300">Conferences</a>
+        <a href="#" class="hover:text-teal-300">Gallery</a>
+        <a href="#" class="hover:text-teal-300">Contact</a>
       </nav>
-      <button id="menu-btn" class="md:hidden text-white text-2xl focus:outline-none">
-        <i class="fas fa-bars"></i>
-      </button>
     </div>
   </header>
 
-  <!-- Contact Content -->
-  <main class="max-w-5xl mx-auto px-6 py-12 space-y-12">
-    <section>
-      <h2 class="text-2xl font-semibold text-[#4B6E57] border-b-2 border-[#20B2AA] pb-2 mb-6">Contact Information</h2>
+  <!-- Contact Info -->
+  <main class="max-w-6xl mx-auto px-6 py-12 space-y-12">
+    <h2 class="text-2xl font-semibold text-green-800 border-b-2 border-teal-400 pb-2 mb-6">Contact Information</h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+      <!-- Info -->
+      <div class="space-y-4 text-base">
+        <p class="font-bold text-lg">Akash Kumar Tarai</p>
+        <p>Postdoctoral Research Fellow</p>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-        <!-- Contact Details -->
-        <div class="space-y-4 text-base leading-relaxed">
-          <p class="font-semibold text-lg">Akash Kumar Tarai</p>
-          <p>Postdoctoral Research Fellow</p>
+        <p>
+          <i class="fas fa-location-dot text-green-800 mr-2"></i>
+          Room No. 2075, Academic Block II, Department of Physical Sciences, IISER Berhampur, Permanent Campus, Berhampur, Odisha, India - 760003
+        </p>
 
-          <p>
-            <i class="fa-solid fa-location-dot text-[#4B6E57] mr-2"></i>
-            Room No. 2075, Academic Block II, Department of Physical Sciences, IISER Berhampur, Permanent Campus, Berhampur, Odisha, India - 760003
-          </p>
+        <p>
+          <i class="fas fa-envelope text-green-800 mr-2"></i>
+          <a href="mailto:akashktarai@gmail.com" class="text-green-700 hover:text-teal-500">akashktarai@gmail.com</a>,
+          <a href="mailto:akasht@iiserbpr.ac.in" class="text-green-700 hover:text-teal-500">akasht@iiserbpr.ac.in</a>
+        </p>
 
-          <p>
-            <i class="fa-solid fa-envelope text-[#4B6E57] mr-2"></i>
-            <a href="mailto:akashktarai@gmail.com" class="text-[#4B6E57] hover:text-[#20B2AA]">akashktarai@gmail.com</a>,
-            <a href="mailto:akasht@iiserbpr.ac.in" class="text-[#4B6E57] hover:text-[#20B2AA]">akasht@iiserbpr.ac.in</a>
-          </p>
-
-          <p>
-            <i class="fa-solid fa-phone text-[#4B6E57] mr-2"></i>
-            <a href="tel:+917205505647" class="text-[#4B6E57] hover:text-[#20B2AA]">+91 7205505647</a>
-          </p>
-        </div>
-
-        <!-- Google Maps Embed -->
-        <div class="w-full h-80">
-          <iframe
-            class="w-full h-full rounded-lg shadow"
-            src="https://www.google.com/maps?q=19.197081,84.836541&hl=es;z=14&output=embed"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
-        </div>
+        <p>
+          <i class="fas fa-phone text-green-800 mr-2"></i>
+          <a href="tel:+917205505647" class="text-green-700 hover:text-teal-500">+91 7205505647</a>
+        </p>
       </div>
-    </section>
+
+      <!-- Map -->
+      <div>
+        <iframe
+          class="w-full h-80 rounded-lg shadow"
+          src="https://maps.google.com/maps?q=19.197081,84.836541&z=15&output=embed"
+          allowfullscreen=""
+          loading="lazy">
+        </iframe>
+      </div>
+    </div>
   </main>
 
   <!-- Footer -->
-  <footer class="bg-[#f4f4f4] py-6 text-center text-sm text-[#1A1A1A]">
+  <footer class="bg-gray-200 py-6 text-center text-sm text-gray-700">
     © 2025 Akash Kumar Tarai, Postdoctoral Research Fellow, IISER Berhampur, India
   </footer>
-
-  <!-- Script -->
-  <script>
-    const menuBtn = document.getElementById('menu-btn');
-    menuBtn.addEventListener('click', () => {
-      const nav = document.querySelector('nav');
-      nav.classList.toggle('hidden');
-    });
-  </script>
-
 </body>
 </html>
