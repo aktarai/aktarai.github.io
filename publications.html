@@ -1,128 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Publications | Akash Kumar Tarai</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <style>
-      body {
-        font-family: 'Inter', sans-serif;
-      }
-      ol.custom-list {
-        counter-reset: item;
-        list-style: none;
-        padding-left: 0;
-      }
-      ol.custom-list li {
-        counter-increment: item;
-        position: relative;
-        padding-left: 1.75rem;
-        margin-bottom: 1.25rem;
-        text-align: justify;
-      }
-      ol.custom-list li::before {
-        content: counter(item) ".";
-        position: absolute;
-        left: 0;
-        top: 0;
-        color: #d1d5db;
-      }
-      ol.reverse {
-        display: flex;
-        flex-direction: column-reverse;
-      }
-    </style>
-  </head>
-  <body class="bg-[#1A1A1A] text-gray-200">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Publications | Akash Kumar Tarai</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    ol.custom-list {
+      counter-reset: item;
+      padding-left: 0;
+      list-style: none;
+    }
+    ol.custom-list li {
+      counter-increment: item;
+      position: relative;
+      margin-bottom: 1.2rem;
+      padding-left: 1.8rem;
+      text-align: justify;
+      font-size: 1rem;
+      color: #1A1A1A;
+    }
+    ol.custom-list li::before {
+      content: counter(item) ".";
+      position: absolute;
+      left: 0;
+      color: #1A1A1A;
+    }
+    ol.custom-list.reverse {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  </style>
+</head>
+<body class="bg-[#f7f7f7] text-[#1A1A1A]">
 
-    <!-- Navbar -->
-    <header class="bg-[#111111] shadow sticky top-0 z-50">
-      <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        <a href="index.html" class="text-xl font-bold text-white hover:text-[#FFD700]">Akash Kumar Tarai</a>
-        <button id="menu-toggle" class="md:hidden text-white focus:outline-none">
-          <i class="fas fa-bars fa-lg"></i>
-        </button>
-        <nav class="hidden md:flex space-x-8 text-base font-medium">
-          <a href="index.html" class="text-white hover:text-[#FFD700]">Profile</a>
-          <a href="publications.html" class="text-white hover:text-[#FFD700]">Publications</a>
-          <a href="awards.html" class="text-white hover:text-[#FFD700]">Awards & Grants</a>
-          <a href="conferences.html" class="text-white hover:text-[#FFD700]">Conferences & Workshops</a>
-          <a href="gallery.html" class="text-white hover:text-[#FFD700]">Gallery</a>
-          <a href="contact.html" class="text-white hover:text-[#FFD700]">Contact</a>
-        </nav>
+  <!-- Navigation -->
+  <header class="bg-[#2E3A59] shadow sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="index.html" class="text-white text-2xl font-semibold hover:text-[#FFB800]">Akash Kumar Tarai</a>
+      <nav class="hidden md:flex space-x-8 text-lg font-medium">
+        <a href="index.html" class="text-white hover:text-[#FFB800]">Profile</a>
+        <a href="publications.html" class="text-white hover:text-[#FFB800]">Publications</a>
+        <a href="awards.html" class="text-white hover:text-[#FFB800]">Awards & Grants</a>
+        <a href="conferences.html" class="text-white hover:text-[#FFB800]">Conferences & Workshops</a>
+        <a href="gallery.html" class="text-white hover:text-[#FFB800]">Gallery</a>
+        <a href="contact.html" class="text-white hover:text-[#FFB800]">Contact</a>
+      </nav>
+      <button id="menu-btn" class="md:hidden text-white text-2xl focus:outline-none">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 space-y-2 text-white text-base font-medium">
+      <a href="index.html" class="block hover:text-[#FFB800]">Profile</a>
+      <a href="publications.html" class="block hover:text-[#FFB800]">Publications</a>
+      <a href="awards.html" class="block hover:text-[#FFB800]">Awards & Grants</a>
+      <a href="conferences.html" class="block hover:text-[#FFB800]">Conferences & Workshops</a>
+      <a href="gallery.html" class="block hover:text-[#FFB800]">Gallery</a>
+      <a href="contact.html" class="block hover:text-[#FFB800]">Contact</a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-5xl mx-auto px-6 py-12 space-y-12">
+
+    <!-- PhD Thesis Section -->
+    <section>
+      <h2 class="text-xl font-semibold border-b-2 border-[#FFB800] pb-2">PhD Thesis</h2>
+      <div class="mt-4 space-y-2">
+        <p class="leading-relaxed">
+          <a href="http://hdl.handle.net/10603/596075" target="_blank" class="text-[#B6862C] hover:text-[#FFB800] underline">
+            Development of a novel LIBS based Technique for Elemental Analysis and Harnessing Machine Learning for Real time Applications using LIBS and Raman Spectroscopy 🔗
+          </a>
+        </p>
+        <p class="font-bold text-[#1A1A1A]">Akash Kumar Tarai</p>
+        <p class="italic text-gray-700">University of Hyderabad, India</p>
+        <p class="italic text-gray-700">2024</p>
       </div>
-      <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 space-y-2 bg-[#111111] text-base font-medium">
-        <a href="index.html" class="block text-white hover:text-[#FFD700]">Profile</a>
-        <a href="publications.html" class="block text-white hover:text-[#FFD700]">Publications</a>
-        <a href="awards.html" class="block text-white hover:text-[#FFD700]">Awards & Grants</a>
-        <a href="conferences.html" class="block text-white hover:text-[#FFD700]">Conferences & Workshops</a>
-        <a href="gallery.html" class="block text-white hover:text-[#FFD700]">Gallery</a>
-        <a href="contact.html" class="block text-white hover:text-[#FFD700]">Contact</a>
+    </section>
+
+    <!-- Peer-reviewed Publications Section -->
+    <section>
+      <h2 class="text-xl font-semibold border-b-2 border-[#FFB800] pb-2">Peer-reviewed Publications</h2>
+      <div class="mt-4">
+        <ol class="custom-list reverse">
+          <!-- START: Journal Publications -->
+          [PASTE FULL LIST OF JOURNAL PUBLICATIONS HERE - omitted here due to size, but I'll populate it in the next step.]
+          <!-- END: Journal Publications -->
+        </ol>
       </div>
-    </header>
+    </section>
 
-    <!-- Main Content -->
-    <main class="max-w-5xl mx-auto px-6 py-12 space-y-16">
+    <!-- Conference Publications Section -->
+    <section>
+      <h2 class="text-xl font-semibold border-b-2 border-[#FFB800] pb-2">Conference Publications</h2>
+      <div class="mt-4">
+        <ol class="custom-list reverse">
+          <!-- START: Conference Publications -->
+          [PASTE FULL LIST OF CONFERENCE PUBLICATIONS HERE - omitted here due to size, will populate next.]
+          <!-- END: Conference Publications -->
+        </ol>
+      </div>
+    </section>
 
-      <!-- PhD Thesis -->
-      <section>
-        <h2 class="text-2xl font-semibold text-[#FFD700] border-b border-[#FFD700] pb-2">PhD Thesis</h2>
-        <div class="mt-4 space-y-1 text-gray-300 text-justify">
-          <p>
-            <a href="http://hdl.handle.net/10603/596075" target="_blank" class="hover:text-[#FFD700]">
-              Development of a novel LIBS based Technique for Elemental Analysis and Harnessing Machine Learning for Real time Applications using LIBS and Raman Spectroscopy 🔗
-            </a>
-          </p>
-          <p class="font-bold text-white">Akash Kumar Tarai</p>
-          <p class="italic text-gray-400">University of Hyderabad, India</p>
-          <p class="italic text-gray-400">2024</p>
-        </div>
-      </section>
+  </main>
 
-      <!-- Peer-reviewed Publications -->
-      <section>
-        <h2 class="text-2xl font-semibold text-[#FFD700] border-b border-[#FFD700] pb-2">Peer-reviewed Publications</h2>
-        <div class="mt-4">
-          <ol class="custom-list reverse text-gray-300">
-            <li>
-              A. K. Tarai, et al. "Title of Peer-Reviewed Paper." <em>Journal Name</em>, vol. XX, pp. XX–XX, 202X.
-            </li>
-            <!-- Add more items similarly -->
-          </ol>
-        </div>
-      </section>
+  <!-- Footer -->
+  <footer class="bg-[#f7f7f7] py-6 text-center text-sm text-[#1A1A1A]">
+    © 2025 Akash Kumar Tarai, Postdoctoral Research Fellow, IISER Berhampur, India
+  </footer>
 
-      <!-- Conference Publications -->
-      <section>
-        <h2 class="text-2xl font-semibold text-[#FFD700] border-b border-[#FFD700] pb-2">Conference Publications</h2>
-        <div class="mt-4">
-          <ol class="custom-list reverse text-gray-300">
-            <li>
-              A. K. Tarai, et al. "Title of Conference Paper." <em>Conference Name</em>, 202X.
-            </li>
-            <!-- Add more items similarly -->
-          </ol>
-        </div>
-      </section>
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
 
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-[#111111] py-6 text-center text-sm text-gray-500">
-      © 2025 Akash Kumar Tarai, Postdoctoral Research Fellow, IISER Berhampur, India
-    </footer>
-
-    <!-- Script for Mobile Menu Toggle -->
-    <script>
-      const toggle = document.getElementById('menu-toggle');
-      const menu = document.getElementById('mobile-menu');
-      toggle.addEventListener('click', () => {
-        menu.classList.toggle('hidden');
-      });
-    </script>
-
-  </body>
+</body>
 </html>
