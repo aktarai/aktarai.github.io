@@ -7,21 +7,21 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-JQN0HVDCCY');
   </script>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Akash Kumar Tarai</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
   <style>
     body {
       font-family: 'Inter', sans-serif;
     }
 
-    /* Left side freeze on scroll for web version */
     @media (min-width: 768px) {
       .sticky-left {
         position: sticky;
@@ -30,33 +30,24 @@
       }
     }
 
-    /* Make sure the right side scrolls */
-    .main-content {
-      overflow-y: auto;
-      max-height: calc(100vh - 60px);
-    }
-
-    /* Justified text for biography section */
     .bio-text {
       text-align: justify;
     }
 
-    /* Golden underline stretched across the page */
     .underline-long {
       border-bottom: 3px solid #FFB800;
       width: 100%;
     }
   </style>
 </head>
+
 <body class="bg-[#f7f7f7] text-[#1A1A1A]">
 
   <!-- Navigation -->
   <header class="bg-[#2E3A59] shadow sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      <!-- Left Logo or Name -->
       <a href="index.html" class="text-white text-2xl font-semibold hover:text-[#FFB800]">Akash Kumar Tarai</a>
 
-      <!-- Desktop Menu -->
       <nav class="hidden md:flex space-x-8 text-lg font-medium">
         <a href="index.html" class="text-white hover:text-[#FFB800]">Profile</a>
         <a href="publications.html" class="text-white hover:text-[#FFB800]">Publications</a>
@@ -66,13 +57,11 @@
         <a href="contact.html" class="text-white hover:text-[#FFB800]">Contact</a>
       </nav>
 
-      <!-- Mobile Menu Button -->
       <button id="menu-btn" class="md:hidden text-white text-2xl focus:outline-none">
         <i class="fas fa-bars"></i>
       </button>
     </div>
 
-    <!-- Mobile Menu Dropdown -->
     <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 space-y-2 text-white text-base font-medium">
       <a href="index.html" class="block hover:text-[#FFB800]">Profile</a>
       <a href="publications.html" class="block hover:text-[#FFB800]">Publications</a>
@@ -86,27 +75,27 @@
   <!-- Main Section -->
   <main class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-12">
 
-    <!-- Left: Photo and Contact (Sticky Section) -->
+    <!-- Left Panel -->
     <aside class="col-span-1 flex flex-col items-center text-center sticky-left">
       <img src="assets/my_photo.jpeg" alt="Your Photo" class="w-72 h-72 rounded-xl object-cover shadow-xl border-4 border-white mb-6">
       <div class="text-2xl font-bold mb-1">Akash Kumar Tarai</div>
       <div class="text-[#2E3A59] font-semibold">Postdoctoral Research Fellow</div>
       <div class="text-[#4B5563] text-base mb-4">IISER Berhampur, India</div>
 
-      <!-- Email Links -->
+      <!-- Email -->
       <p class="text-sm text-[#4B5563] hover:text-[#FFB800]">
-        <a href="mailto:akashktarai@gmail.com"class="font-semibold">akashktarai@gmail.com</a>
+        <a href="mailto:akashktarai@gmail.com" class="font-semibold">akashktarai@gmail.com</a>
       </p>
       <p class="text-sm text-[#4B5563] hover:text-[#FFB800] mb-4">
-        <a href="mailto:akasht@iiserbpr.ac.in"class="font-semibold">akasht@iiserbpr.ac.in</a>
+        <a href="mailto:akasht@iiserbpr.ac.in" class="font-semibold">akasht@iiserbpr.ac.in</a>
       </p>
 
-      <!-- Download CV Button -->
-      <a href="assets/CV_Akash.pdf" download class="mt-4 inline-block px-5 py-2 bg-[#2E3A59] text-white text-sm font-medium rounded-lg hover:bg-[#FFB800] shadow">
-        <i class="fas fa-file-alt mr-2"></i>Download CV
+      <!-- CV Button with Google Drive link -->
+      <a href="https://drive.google.com/file/d/1oLEFe638wUSLw0NGfjEih8Yz0qcZUHX0/view?usp=drive_link" target="_blank" class="mt-4 inline-block px-5 py-2 bg-[#2E3A59] text-white text-sm font-medium rounded-lg hover:bg-[#FFB800] shadow">
+        <i class="fas fa-file-alt mr-2"></i>View CV
       </a>
 
-      <!-- Social Icons -->
+      <!-- Socials -->
       <div class="flex justify-center space-x-6 text-[2.2rem] text-[#2E3A59] mt-6">
         <a href="https://scholar.google.co.in/citations?user=3q74S1kAAAAJ&hl=en&oi=ao" target="_blank" title="Google Scholar" class="hover:text-[#FFB800]">
           <i class="fas fa-graduation-cap"></i>
@@ -120,8 +109,9 @@
       </div>
     </aside>
 
-    <!-- Right: Bio and Sections -->
-    <section class="col-span-2 space-y-10 main-content">
+    <!-- Right Section -->
+    <section class="col-span-2 space-y-10">
+
       <!-- Biography -->
       <div>
         <h2 class="text-xl font-semibold border-b-2 border-[#FFB800] pb-1 mb-3">Biography</h2>
@@ -171,8 +161,9 @@
             </div>
             <span class="text-gray-700">University of Hyderabad, India</span><br>
             <span class="text-gray-600">Mentor: Prof. Manoj Kumar Gundawar</span><br>
-            <a href="assets/Revised_Thesis_Akash.pdf" target="_blank" class="text-[#B6862C] hover:text-[#FFB800] underline text-sm">View Thesis</a>
+            <a href="https://drive.google.com/file/d/1pI9MOtccMtjnFQikNVmexVWAYDb2Bhr_/view?usp=drive_link" target="_blank" class="text-[#B6862C] hover:text-[#FFB800] underline text-sm">View Thesis</a>
           </div>
+
           <div class="border-l-4 border-[#FFB800] pl-4">
             <div class="flex justify-between items-center">
               <span class="font-semibold">M.Sc. in Physics</span>
@@ -180,6 +171,7 @@
             </div>
             <span class="text-gray-700">Pondicherry University, India</span>
           </div>
+
           <div class="border-l-4 border-[#FFB800] pl-4">
             <div class="flex justify-between items-center">
               <span class="font-semibold">B.Sc. in Physics</span>
@@ -189,7 +181,6 @@
           </div>
         </div>
       </div>
-
     </section>
   </main>
 
@@ -199,13 +190,11 @@
   </footer>
 
   <script>
-    // Mobile menu toggle
     const menuBtn = document.getElementById('menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
     menuBtn.addEventListener('click', () => {
       mobileMenu.classList.toggle('hidden');
     });
   </script>
-
 </body>
 </html>
